@@ -1,0 +1,53 @@
+{% extends "el_basetemplate.html" %}
+{% block bodyblock %}
+<div class="container">
+    <div class="row" >
+
+        <div class="container" style="z-index:1">
+            <div class="bgreen"><span class="bestdir lh38">{{idname}}</span></div>
+        </div>
+{% set a=0 %}
+        {% for line2 in arr %}
+{% set a=a+1 %}{% if a==4 %} {% set a=1 %}<div class="row">{% set opened=true %}{% endif %}
+        <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12" style="z-index:1">
+            <div class="thumbnail text-left">
+                <div class="caption">
+                    <div class="row">
+                        <span class="p15"><img src="http://www.elitsy.ru/palomnichestvo/imgi/{{line2.flagurl}}" vspace="2"/> <span class="lh22center">{{line2.countryname}}</span></span>
+                        <h3 class="tourbartop">{{line2.title}}</h3>
+                    </div>
+                </div>
+                <a class="bodycard" href="/palomnichestvo/tours/{{line2.surl}}/{{line2.id}}">
+                    <span class="typeb"><span class="typebirk">&nbsp;{{line2.typname}}&nbsp;</span></span>
+                    <span class="birklay"><span class="len1birk">&nbsp;{{line2.breslength}}/{{line2.bresnight}}&nbsp;</span></span>
+                    <img src="http://www.elitsy.ru/palomnichestvo/img/{{line2.mainfoto}}" align="left"
+                         class="img-responsive" alt="...">
+                    <div class="caption">
+                        <p class="tourbardesc">{{line2.main_descr}}</p>
+                    </div>
+                </a>
+                <div class="hidden-xs thinline mtop5"></div>
+                <div class="h5line"></div>
+
+                <div class="pricebron">
+                    <div class="row text-justify">
+                        <span class="tprice fleft"
+                              style="padding-top:5px; margin-left:25px">От {{line2.baseprice}} &#8381;</span>
+                        <span class="text-right fright" style="padding-bottom:10px; padding-right:30px"><button onclick="addTour({{line2.id}})" href="#" class="btn btn-primary prm"
+                                                                                                                role="button">Забронировать</button></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% if a==3%}</div>{% set opened=false %}{% endif %}
+
+    {% endfor %}
+        {% if opened%} </div>{%endif %}
+</div>
+
+</div>
+
+
+
+{% endblock %}

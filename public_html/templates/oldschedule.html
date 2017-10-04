@@ -1,0 +1,32 @@
+<table width="100%" class="table">
+
+    {% set qid=0 %}
+
+    {% set pid=0 %}
+    {% for line in arr %}
+    {% if pid!=line.tourid%}
+    {% set pid=line.tourid %}
+
+
+    {% if qid==0 %}<!--s+++-->
+    {% set qid=1 %}
+    {% else %}
+    {% if qid==1 %}<!--f+++-->
+    {% set qid=0 %}
+    {% endif %}
+    {% endif %}
+
+
+    <tr><td><span class="col-md-4"><a href="/palomnichestvo/tours/{{line.surl}}/{{line.tourid}}">{{line.title }}</a></span><span class="col-md-4 col-md-push-{{line.dtm-4}}"><a
+            href="/palomnichestvo/tours/{{line.surl}}/{{ line.tourid }}?date={{line.id}}">{{line.date}}</a>{{ line.description }}</span></td></tr>
+
+    {% else %}
+    &nbsp;
+
+    <tr><td><span class="col-md-4 col-md-push-{{line.dtm}}"><a
+            href="/palomnichestvo/tours/{{line.surl}}/{{ line.tourid }}?date={{line.id}}">{{line.date}}</a>{{ line.description }}</span></td></tr>
+    {% endif %}
+    {% endfor %}
+</table>
+
+

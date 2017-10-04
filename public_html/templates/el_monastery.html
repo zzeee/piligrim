@@ -1,0 +1,266 @@
+{% extends "el_basetemplate.html" %}
+{% block seo %}
+<title>Паломничество в {{arr["data"][0]["name"] }}</title>
+
+{% endblock %}
+
+{% block header %}
+<div class="container">
+    <div class="row hidden-md hidden-lg">
+        <h1 style="color:#fc6c21;text-align:left">{{arr["data"][0]["name"] }}</h1>
+        <div style="text-align:left" class="lead">{{arr["data"][0]["main_descr"] }}</div>
+    </div>
+    <div class="row hidden-xs hidden-sm" style="height:270px; ">
+        <div style="padding-top:20px" class="col-md-4">
+            <h1 style="color:#fc6c21;text-align:left">{{arr["data"][0]["name"] }}</h1>
+            <div style="text-align:left" class="lead">{{arr["data"][0]["main_descr"] }}</div>
+            <!--        <p class="lead">Даты выездов: {{arr["dateline"] }}</p>-->
+        </div>
+        {% if arr["photos"][0]|length>0 %}
+        <div class="col-md-4 photogallery" style="cursor:pointer">
+            <img data-id="{{arr['photos'][0]['id']}}" galn="{{arr['photos'][0]['galname']}}" src='/palomnichestvo/img/{{arr["photos"][0]["thumbname"]}}' class="img-responsive" vspace=35
+            /></div>
+        {% endif %}
+        {% if arr["photos"][1]|length>0 %}
+        <div class="col-md-4 photogallery" style="cursor:pointer">
+            <img data-id="{{arr['photos'][1]['id']}}" galn="{{arr['photos'][1]['galname']}}"
+                    src='/palomnichestvo/img/{{arr["photos"][1]["thumbname"]}}' class="img-responsive" vspace=35
+
+            />
+        </div>
+        {% endif%}
+    </div>
+</div>
+{% endblock %}
+{% block nav %}
+<nav class="navbar navbar-default" data-spy="affix" data-offset-top="380" id="top_nav">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav col-sm-12 col-md-12">
+                <li class="active menu1" data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">{% include "el_menuall.inc.html" %}
+                </li>
+                <li><a class="menup" href="#">История</a></li>
+                <li class="hidden-xs">
+                    <div class="menudel"></div>
+                </li>
+                <li><a class="menup" style="width:100px; " href="#">Святыни</a></li>
+                <li class="hidden-xs">
+                    <div class="menudel"></div>
+                </li>
+                <li><a class="menup" style="width:100px" href="#">Фото</a></li>
+                <li class="hidden-xs">
+                    <div class="menudel"></div>
+                </li>
+                <li class="hidden-md hidden-sm"><a style="width:140px; " class="menup" href="#">Поездки</a></li>
+                <li class="hidden-md hidden-sm hidden-xs">
+                    <div class="menudel"></div>
+                </li>
+
+                <li class="hidden-md hidden-sm"><a style="width:140px; " class="menup" href="#">Впечатления</a></li>
+                <li class="hidden-md hidden-sm hidden-xs">
+                    <div class="menudel"></div>
+                </li>
+                <li class="menup navbar-right" style="width:200px">
+                    <!--<a id="dLabel2" role="button" data-toggle="collapse" aria-controls="collapseExample"
+                       aria-haspopup="true" aria-expanded="false" href="#collapseExample" id="toursearch">-->
+                    <form class="form-horizontal" action="/palomnichestvo/search/"
+                          style="height:40px;padding-top:10px;padding-left:10px">
+                        <div class="form-group form-group-sm">
+                            <label class="col-sm-2" for="searchf" style="padding-top:3px;padding-right:5px"><img
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAABe0lEQVQ4jaWUPUhcQRCAvzsvicIF0hlB0EpBEKJctEhlIhbaaJEu+NOKRar0tjEQQlBEBVttYkggQgioYCekETSIcnhgZaXYHl+K23e8PN/BOzIw7M7OzMewO7M5lYRMANPAEJAHBG6BXWAZqCQTAFAjbVf31B/qqPog4ZtXz9V3ai7mQ62Dnqpn6nSwS+qS+iGRUFS/qp/TQDn1QH2jPlTX1SN1Vu1LJoRKf4X4f0BT6vdwsKauqi0pgLh2qxfqozhoR32lDqi/M0Ai3VLHIzsPlIB94DWwBlRTX+W+/AReREY+rFXgGjjMCAG4AtojowC0hP3HJiAAT4CbeEUVoLdJCMBz4DQO+gLMNAlpBaaAb/UT9bFaVnsyvhbqovoprbPH1BO1KwPkbYgtpoFQJ0Nlc2ohBdChbqjHIa6/ESjq2E21om6r79UVdd/aLC6EEXmpXsZhOe9/IwBtwCDQCdwBZeAkETMCrIdLP856uY102NrX8ux/QRHsz19ayJDpFeZOCAAAAABJRU5ErkJggg=="
+                            />
+                            </label>
+                            <div class="dropdown dropdown-toggle" style="float:right; padding-left:-50px"
+                                 data-toggle="dropdown"
+                                 aria-haspopup="true" id="toprt"
+                            >
+                                <!--  </a>--><input type="search" name="searchf" class="form-control col-md-6"
+                                                    id="searchf"
+                                                    placeholder="найти поездку"/>
+                            </div>
+                            <ul class="dropdown-menu" id="searchresultzone" aria-labelledby="dLabel6">
+
+                                <span>&nbsp;Пока ничего не найдено</span>
+                            </ul>
+
+                        </div>
+                    </form>
+                </li>
+
+
+            </ul><!--
+                -->
+
+        </div><!-- /.navbar-collapse -->
+    </div>
+</nav>
+{% endblock %}
+
+
+{% block bodyblock %}
+<div class="container">
+    <div class="row">
+        <div class="container">
+
+            <div class="bgreen col-md-12"><span class="bestdir lh38">Описание</span>
+
+            </div>
+            <div>{{arr["data"][0]["main_descr"]|raw}}<br/>{{arr["data"][0]["descr"]|raw}}</div>
+        </div>
+    </div>
+</div>
+
+
+<a name="saints"></a>
+{% if citydata|length>0 %}
+<br/>
+<div class="container">
+
+    <div class="row">
+        <div class="container">
+            <div class="bgreen col-md-12"><span class="bestdir lh38">Место</span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        {% set sline=citydata %}
+        <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12 noa">
+            <div class="thumbnail ">
+                <div class="caption">
+                    <!--<div class="row">
+                        <span class="p15"><img src="/palomnichestvo/imgi/{{sline.flagurl}}" vspace="2"/> <span class="lh22center">{{sline.countryname}}</span></span>
+                    </div>-->
+                    <div class="row text-center"><h3 style="padding-left:20px; padding-right:20px">{{sline.name}}</h3>
+                    </div>
+
+                </div>
+                <a href="/palomnichestvo/points/{{sline.tname}}">
+                    <img style="min-height:250px" src="/palomnichestvo/img/{{sline.pname}}" class="img-responsive  "
+                         alt="...">
+
+                    {% if sline.descr|length>0 %}
+                    <div class="gdesc"></div>
+                    <div class="gdesc2">{{sline.descr|raw}}</div>
+                    {% else %}
+                    <div style="padding-bottom:20px"></div>
+                    {% endif %}
+                </a>
+                <div class="text-center row" style="padding-bottom:20px"><a
+                        href="/palomnichestvo/points/{{sline.tname}}"
+                        role="button"
+                        class="btn btn-info">Подробнее</a></div>
+            </div>
+            {%
+            if arr["data"][0]["eelitsy"]|length>0 %}
+            <a target="_blank" href='http://www.elitsy.ru/holy/{{arr["data"][0]["eelitsy"]}}'>Описание в разделе
+                "Православные святыни"</a>
+            {% endif %}
+        </div>
+    </div>
+    {% endif %}
+
+
+    {% if arr["photos"]|length >2 %}
+
+    <div class="container">
+        <div class="row" style="padding-top:20px">
+            <div class="container">
+                <div class="bgreen col-md-12"><span class="bestdir lh38">Фото</span>
+                </div>
+            </div>
+        </div>
+
+
+    <div class="row"> {% for aline in arr["photos"] %}
+
+        <span target=_blank style="cursor:pointer" href="/palomnichestvo/img/{{aline.galname}}" class="col-md-4 photogallery" data-title="{{aline.descr}}" ><img data-id="{{aline.id}}" src='/palomnichestvo/img/{{aline.galname}}' title="{{aline.descr}}"  galn={{aline.galname}} sourcen={{aline.name}}  class="img-responsive img-fluid" width="600" vspace=35
+                 hspace="15"
+            /></span>
+
+
+        {% endfor %}
+    </div>
+    </div>
+
+    {% endif %}
+
+
+    <div class="container">
+        {% if arr["places"] is not empty %}
+        <div class="row" style="padding-top:20px">
+            <div class="container">
+                <div class="bgreen col-md-12"><span
+                        class="bestdir lh38">Поездки </span></div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            {% for line2 in arr["places"] %}
+
+            <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12" style="z-index:1">
+                <div class="thumbnail text-left">
+                    <div class="caption">
+                        <div class="row">
+                        <span class="p15"><img src="/palomnichestvo/imgi/{{line2.flagurl}}" vspace="2"/> <span
+                                class="lh22center">{{line2.countryname}}</span></span>
+                            <div class="datebirk" class="fright">
+                                <div class="mtop5"></div>
+                                <div class="dmonth">{% if line2.ddate>0 %}{{line2.ddate}}{% endif %}</div>
+                                <div class="ddmonth">{% if line2.ddate>0 %}{{month[line2.mdate]}}{% else %}по запросу {%
+                                    endif %}
+                                </div>
+                                {% if line2.ddate>0 %}
+                                <div class="triangletop"></div>
+                                {% endif %}
+                            </div>
+                            <h3 class="tourbartop">{{line2.title}}</h3>
+                        </div>
+                    </div>
+                    <a style="text-decoration:none" href="/palomnichestvo/tours/{{line2.surl}}/{{line2.id}}">
+                        <span class="typeb"><span class="typebirk">&nbsp;{{line2.typname}}&nbsp;</span></span>
+              {% if line2.bresnight|length>0%}<span class="birklay"><span
+                                class="len1birk">&nbsp;{{line2.breslength}}/{{line2.bresnight}}&nbsp;</span></span>{% endif %}
+                        <img style="min-height:300px" src="/palomnichestvo/img/{{line2.mainfoto}}" align="left"
+                             class="img-responsive" alt="...">
+                        {% if line2.main_descr|length>0 %}
+                        <div class="gdesc2">
+                            <div class="gdescq"></div>
+                            {{line2.main_descr|raw}}
+                        </div>
+                        {% else%}
+                        <div style="padding-top:20px"></div>
+                        {% endif %}
+                    </a>
+                    <div class="hidden-xs thinline mtop5"></div>
+                    <div class="h5line"></div>
+
+                    <div class="pricebron">
+                        <div class="row text-justify">
+                        <span class="tprice fleft"
+                              style="padding-top:5px; margin-left:25px">От {{line2.baseprice}} &#8381;</span>
+                            <span class="text-right fright" style="padding-bottom:10px; padding-right:30px"><span class="showtour"
+                                                                              data-attr="{{line2.id}}"></span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}{% endif %}
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

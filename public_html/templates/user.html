@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>{% include 'ihead.html' %}
+</head>
+<body>
+{% include 'bodyhead.html' %}
+
+<h1>тур</h1>
+<a href="/tours">Все туры</a><br />
+<table>
+    <thead><td>Название</td><td>Описание</td></thead>
+    <tr><td>{{ arr.title }}</td><td>{{ arr.description }}</td></tr>
+
+</table>
+</body>
+</html>

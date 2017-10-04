@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>{% include 'el_ihead.html' %}
+</head>
+<body>
+{% include 'el_bodyhead.html' %}
+<h1>Список З</h1>
+<table>
+    <thead><td>Вывод номеров заказов</td></thead>
+    {% for line in dataarr %}
+    <tr><td style="color:Red"><a href="/orders/{{ line.id }}">{{ line.id}}</a></td></tr>
+    {% endfor %}
+</table>
+</body>
+</html>

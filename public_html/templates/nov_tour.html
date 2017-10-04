@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title> {% include 'nov_ihead.html' %}
+</head>
+<body>
+{% include 'nov_bodyhead.html' %}
+
+<span id="authwindow"  class="authwin" style="position:absolute; visibility:hidden; left:100px ">AAAA</span>
+
+<ol class="breadcrumb">
+    <li><a href="/">Главная</a></li>
+    <li><a href="/tours">Туры</a></li>
+    <li><a href="/tours/{{arr['turdata'][0].surl}}">{{arr['turdata'][0].name}}</a></li>
+    <li class="active">Страница тура</li>
+</ol>
+
+<div class="jumbotron">
+    <img src='http://www.nov-rus.ru/img/{{arr["turdata"][0].mainfoto}}' vspace=5 class="pull-right" height="300"/>
+    <h1 style="color:darkred">{{arr["turdata"][0].title }}</h1>
+    <p class="lead">{{arr["turdata"][0].main_descr }}</p>            <h2>{{ tprice }}</h2>
+    <p><a class="btn btn-lg btn-info" href="#reserve" role="button">Присоединиться!</a></p>
+    <p class="lead">Даты выездов: {{arr["dateline"] }}</p>
+</div>
+
+<div class="panel panel-info">
+    <div class="panel-heading">О туре:</div>
+    <ul class="list-group">
+        <li class="list-group-item">{{arr["turdata"][0].description}}</li>
+        <li class="list-group-item"><div class="row">
+            <br /><br /><Br />
+        </div></li>
+
+    </ul>
+    <div class="panel-body"><b>Программа</b>:<br/>
+        <pre>{{arr["turdata"][0].program }}</pre>
+    </div><ul class="list-group"><li class="list-group-item"><b>Места</b>: <br /></li></ul><script type="text/javascript">console.log("select * from places where id in (select placeid from tours_places where tourid=60)and type in (4,5) ")</script><ul class="list-group"><li class="list-group-item"><b>Святые и святыни</b>: <br /><br /><div class='row'></div></li></ul>                    <ul class="list-group">
+    <li class="list-group-item">
+        <div><h4><b>Дополнительная информация</b></h4>
+            <p></p><br/>
+        </div></li>
+    <li class="list-group-item">
+        <script type="text/javascript">console.log("2!!!!")</script>            <div class="panel panel-primary" id="reserve-panel">
+        <div class="panel-heading">
+            <h3 class="panel-title">Бронирование</h3>
+        </div>                 <div class="panel-body" style="font-size:18">
+        <form id="doreserve" action="reserve.php?action=add&do=1" method="POST" enctype="multipart/form-data" role="form">
+            <input type="hidden" name="nomenu" value="1"/>
+            <input type="hidden" name="tourid" value="60"/>
+            <input type="hidden" name="molodrus" value="" />
+            <input type="hidden" name="actionprice" value="" />
+            <input type="hidden" name="dealerid" value=""/>
+            <div class="form-group" >Дата:1.1.2017<input type="hidden" name=tourdate value="89" />                        </div>
+            <script type="text/javascript">console.log("aith:")</script>     <input type="hidden" name="typ" value="1"/>
+            <span><span style="cursor:pointer" onclick="showReg();return false;" >Хотите бронировать поездку в 1 клик? Зарегистрируйтесь!</span><br/><br/>Укажите имя и номера телефонов участников поездки</span>
+            <div class="input-group">
+                <!--<label for="fio-l">ФИО</label>-->
+                <span class="input-group-addon" id="basic-addon1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ФИО</span>
+                <input type="text" class="form-control" aria-describedby="basic-addon1" name="name" id="fio-l"
+                       placeholder="пример: Иванов Иван Иванович"  />
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon2">Телефон</span>
+                <input type="text" class="form-control" style="z-index:0" name="phones" id="phones-l"  placeholder="пример: 89134567890"             aria-describedby="basic-addon2">
+            </div><span id="addoptions"><h3>Дополнительные опции</h3><table class="table"><thead><td></td><td>Возможность</td><td>Цена</td></thead><tr><td><input id=testdat type='checkbox' class='checkpar' name=pars[] value='43' /></td><Td>Фиксированное место в первой части автобуса</Td><td>100 руб.</td></tr></table></span><span id="products"><h3>Товары в дорогу</h3><table class="table"><thead><td ></td><td  ></td><td>Цена</td></thead><tr><td><input id=testdat type='checkbox' class='checkpar' name=pars[] value='38' /></td><Td>Бремя страстей. Тайная жизнь наших душ. Протоиерей Андрей Ткачев</Td><td>300 руб.</td></tr></table></span><span id="allprices"><h5>Цена (за одного человека*): <span id="setprice">{{ price }}</span><br /><span>Цена опций:</span><span id="extprice"></span></h5><br />
+                        <span>Итого: </span><span id="totalprice"></span><br />
+                        <br />
+                        <span   id="addall" class="btn btn-primary" role="button">Еду сам. Перейти к оплате</span>
+                        <span   id="addbutton" class="btn btn-primary" role="button">Еду с друзьями</span>
+</span>
+            <!-- <input  id="addbutton" type="submit"  class="btn btn-default" value="Добавить"/>-->
+
+        </form></div></div>
+        </span><br />
+
+
+</body>
+</html>

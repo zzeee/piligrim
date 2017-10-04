@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Lobster&amp;subset=cyrillic" rel="stylesheet">
+    <meta charset="UTF-8">
+</head>
+<body>
+<table border="0" style="background-color: #6bb012;" width="50%">
+    <tr><td colspan=2 style="background-color: #6bb012;text-align:center"><br /><img src="https://s3-eu-west-1.amazonaws.com/elitsy/static/images/logo-small.png" /><!--<br /><span style="color:white;font-family:Lobster">Паломничество</span>--></td></tr>
+    <tr><td colspan=2 style="background-color: #6bb012;vertical-align:top;text-align:center;color:white;font-family:Lobster"><h1>Паломническая поездка</h1></td></tr>
+
+    <tr><td><img src="/palomnichestvo/img/order{{orderid}}.png" width="200"/></td>
+        <td style="background-color:white;width:100%;vertical-align:top; padding-top:15px">{{res.tourdata.title}}.<br />Дата: {{res.tourdata.date}}<br /><b>{{res.tourdata.comment}}</b><br />Полная стоимость:{{res.tourdata.psum}} руб.
+            {% if res.tour_reserves|length>0 %}<table>
+                {% for line in res.tour_reserves  %}
+                    <tr><td>{{line.fio}}</td></tr>
+                {% endfor %}
+                {% endif %}</table>
+
+            {% if res.tour_services|length>0 %}<table>
+                {% for line in res.tour_services  %}
+                    <tr><td>{{line.title}}: {{line.value}}</td></tr>
+                {% endfor %}
+                {% endif %}</table>
+        </td>
+    </tr>
+<tr><td colspan="2">
+        <form method="POST" action="https://money.yandex.ru/eshop.xml">
+            <input type="hidden" name="shopId" value="141183"/>
+            <input type="hidden" name="scid" value="102181"/>
+            <input type="hidden" name="shopSuccessUrl" value="/palomnichestvo/success"/>
+            <input type="hidden" name="shopFailUrl" value="/palomnichestvo/fail"/>
+            <input type="hidden" name="cps_phone" value="{{ res.tourdata.phone }}" size="64"/>
+            <input type="hidden" name="custEmail" value="{{ res.tourdata.emid }}" size="64"/>
+            <input type="hidden" name="custName" value="{{ res.tourdata.emid }}" size="64"/>
+            <input type="hidden" name="orderDetails" value="Оплата заказа:{{ res.tourdata.id }}" size="64"/>
+            <input type="hidden" name="orderNumber" value="{{ res.tourdata.id }}" size="64"/>
+            <input type="hidden" name="customerNumber" value="{{ res.tourdata.uid }}" size="64"/>
+            <input type="hidden" name="sum" value="{{ res.tourdata.prepaysum }}.00"/>
+            <Button type="submit" className="btn btn-lg btn-primary">Перейти к оплате:{{ res.tourdata.prepaysum }} руб.</Button>
+        </form>
+    </td></tr>
+
+</table>
+
+</body>
+</html>
+
+
+
+

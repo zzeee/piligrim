@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>{% include 'ihead.html' %}
+</head>
+<body>
+{% include 'bodyhead.html' %}
+
+<h1>Список туров</h1>
+<table>
+    <thead><td>Название</td><td>Описание</td></thead>
+
+    {% for line in arr %}
+
+    <tr><td style="color:Red"><a href="/tours/{{ line.id }}">{{ line.title }}</a></td><td>{{ line.description }}</td></tr>
+    {% endfor %}
+</table>
+</body>
+</html>

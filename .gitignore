@@ -1,0 +1,11 @@
+node_modules/
+vendor/
+ChronoMint/
+coverage/
+.idea/
+*.log
+*.bac
+/coverage
+yarn.lock
+package-lock.json
+build.zip

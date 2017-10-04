@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>{% include 'ihead.html' %}
+</head>
+<body>
+{% include 'bodyhead.html' %}
+
+<h1>тур</h1>
+<a href="/points">Все точки</a><br />
+<table>
+    <thead><td>Название</td><td>Описание</td></thead>
+    <tr><td>{{ arr.id }}</td><td>{{ arr.name }}</td></tr>
+
+</table>
+</body>
+</html>

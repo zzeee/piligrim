@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+>
+    {% for sline in arr %}
+        {% if sline|length>0 %}
+    <url>
+        <loc>https://elitsy.ru{{sline.url}}</loc>
+        <image:image>
+            <image:loc>https://elitsy.ru/palomnichestvo/img/{{ sline.foto }}</image:loc>
+            <image:caption>Паломничество в {{ sline.title }}</image:caption>
+        </image:image>
+    </url>
+    {%  endif %}
+{% endfor %}
+</urlset>

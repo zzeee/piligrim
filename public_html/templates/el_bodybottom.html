@@ -1,0 +1,39 @@
+<footer class="footer">
+    <div class="container.fluid" style="background-color: #69b200; margin-top:10px;color:White">
+        <div class="container bottombar">
+            <div class="row" style="padding-top:20px">
+                <div class="col-md-3 "><a class="botomlink" href="/palomnichestvo/about">О проекте</a></div>
+                <div class="col-md-3"><span>Поездки</span>
+                    <ul>
+                        <li><a class="bottomlink" href="/palomnichestvo/schedule">По России</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3">Гид паломника<br />
+                <ul>
+                    <li><a class="bottomlink" href="/palomnichestvo/points">Православная Россия</a></li>
+                    <li><a class="bottomlink" href="/palomnichestvo/sp/">Монастыри и храмы</a></li>
+                    <li><a class="bottomlink" href="/palomnichestvo/tours/">Маршруты из Москвы</a></li>
+
+                </ul>
+                </div>
+                <div class="col-md-3"><a class="botomlink" href="/profile/46564/">Контакты</a>
+
+                </div>
+
+            </div>
+            <a href="http://www.suprematik.com" class="bottomlink">Разработка - СУПРЕМАТИК</a><br />
+        </div>
+    </div>
+
+    {% if mainmenu.type=="debug" %}
+    <script src="http://151.248.116.2:8080/static/resindex.js" ></script>
+{% else %}
+    <script src="/palomnichestvo/res/15resindex.js" ></script>
+    {% endif %}
+    <script type="text/javascript">
+    //alert(window.opener);
+
+
+    </script>
+    </footer>

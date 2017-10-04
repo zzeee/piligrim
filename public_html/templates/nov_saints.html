@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title> {% include 'nov_ihead.html' %}
+</head>
+<body>
+{% include 'nov_bodyhead.html' %}
+
+<table>
+    <thead><td>Название</td><td>Описание</td></thead>
+    {% for line in arr %}
+    <tr><td><a href="/saints/{{ line.id }}">{{ line.title }}</a></td><td></td></tr>
+    {% endfor %}
+</table>
+</body>
+</html>

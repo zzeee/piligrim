@@ -1,0 +1,5 @@
+#!/bin/bash
+#echo "wf2f24"
+sendmail "$1" <tmpmail
+#cat tmpmail
+#echo ewf$1

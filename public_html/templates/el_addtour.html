@@ -1,0 +1,48 @@
+{% extends "el_basetemplate.html" %}
+{% block bodyblock %}
+<div class="container">
+    <div class="row"><h1>Елицы - не паломническая служба</h1></div>
+    <div class="row"><h3>Наша цель - помочь людям отправиться в паломническую поездку.</h3></div>
+    <div class="col-md-8 col-sm-8"><form method="POST" class="form-horizontal">
+        <div class="form-group"><label for="yname" class="col-sm-2 control-label">Как вас зовут
+            </label>
+            <div class="col-sm-10">
+            <input class="form-control" type="text" name="yname" id="yname" /></div></div>
+
+        <div class="form-group"><label class="col-sm-2 control-label" for="yphone">Ваш номер телефона
+
+        </label>
+            <div class="col-sm-10">
+            <input type="text"  class="form-control" name="yphone1" id="yphone" /></div></div>
+
+            <div class="form-group"><label class="col-sm-2 control-label" for="ycity">Город и район начала поездки
+
+        </label><div class="col-sm-10"><input name="ycity" type="text"  class="form-control"  id="ycity" /></div></div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label" for="typ">Кого вы представляете</label><div class="col-sm-10"><select id="typ" name="typ" class="form-control"  ><option>Паломническая служба</option><option>Приход</option><option>Ответственный по молодежной работе</option><option>Организатор поездок</option></select></div>
+
+        </div>
+
+        <div class="form-group"><label class="col-sm-2 control-label" for="marsh">Маршрут поездки</label>
+            <div class="col-sm-10">
+            <textarea id="marsh" name="t1" type="text" class="form-control" ></textarea></div></div>
+
+        <div class="form-group"><label class="col-sm-2 control-label" for="progr">Программа</label>
+            <div class="col-sm-10">
+            <textarea id="progr" name="t2" type="text" class="form-control" ></textarea></div></div>
+
+
+        <div class="form-group"><label class="col-sm-2 control-label" for="saints">Святыни</label>
+            <div class="col-sm-10">
+            <textarea id="saints" name="t3" type="text" class="form-control" ></textarea></div></div>
+<button class="btn btn-primary">Отправить заявку</button>
+
+    </form></div>
+<br />
+    <br /><br /><br />
+    <div class="row"></div>
+
+
+</div>
+{% endblock %}

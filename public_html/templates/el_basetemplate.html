@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% block seo %}
+    {% endblock %}
+    {% include 'el_ihead.html' %}
+</head>
+<body>
+<div id="root" ></div>
+
+{% block header %}
+<div class="container.fluid mainfoto">
+    <div class="container">
+        <div class="col-md-10 col-md-offset-3 toptext mtop105"
+        >
+            <div class="row"><span class="col-md-1 hidden-sm hidden-md hidden-xs"><div class="tleft"></div></span>
+                <span class="col-md-6  col-lg-6 col-xs-12 gtriangle"
+                ><a class="etoplink" href="{{mainmenu[10].url}}">                        <div class="toptext1">{{mainmenu[10].text1}}</div>
+                        <div class="toptext2">{{mainmenu[10].text2}} <i class="fa fa-rub" style="font-size:24px" aria-hidden="true"></i></div>
+                        <div class="toptextline">
+                            <div class="thinline tthin"></div>
+                            </div>
+                        <div class="toptext3">{{mainmenu[10].text3}}</div>
+                </a></span><span class="col-md-1 hidden-md hidden-sm hidden-xs pl0"><div class="tright"></div></span>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+<div class="container.fluid">
+    {% block nav %}
+
+<nav class="navbar navbar-default" data-spy="affix" data-offset-top="385" id="top_nav">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav col-sm-12 col-md-12">
+                {% include "mobile_menuall.twig" %}
+
+                                <li class="hidden-xs active menu1">{% include "el_menuall.inc.html" %}
+                                </li>
+                                <li><a class="menup hidden-xs" style="width:130px; " href="/palomnichestvo/schedule">Расписание</a></li>
+                                <li class="hidden-xs">
+                                    <div class="menudel"></div>
+                                </li>
+
+                                <li class="dropdown menup hidden-xs" style="width:100px"><a id="dLabel5" type="button" data-toggle="dropdown"
+                                                                                  aria-haspopup="true" aria-expanded="false"
+                                                                                  class="dropdown-toggle"  class="menup" href="#"
+                                                                                  >Россия <span
+                                        class="caret"></span></a>
+                                    <ul class="dropdown-menu" aria-labelledby="dLabel5">
+                                        {% for line in mainmenu[5] %}
+                                        <li><a href="/palomnichestvo/tours/{{line.surl}}/{{line.id}}">{{line.title}} от {{line.baseprice}} руб.</a></li>
+                                        {% endfor %}
+
+                                        <li role="separator" class="divider"></li>
+                                        <li><a href="/palomnichestvo/tours">Все поездки по России</a></li>
+                                    </ul>
+                                </li>
+                                <li class="hidden-xs hidden-sm">
+                                    <div class="menudel"></div>
+                                </li>
+                <!--<li class="hidden-xs hidden-sm"><a class="menup"  class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dLabelZem" style="width:200px; " href="#">Библейские земли <span
+                        class="caret"></span></a>                    <ul class="dropdown-menu" aria-labelledby="dLabelZem">
+                    {% for line in mainmenu[6] %}
+                    <li><a href="/palomnichestvo/tours/{{line.surl}}/{{line.id}}">{{line.title}} от {{line.baseprice}} руб.</a></li>
+                    {% endfor %}
+                     </ul>
+                </li>
+                <li class="hidden-xs hidden-sm">
+                    <div class="menudel"></div>
+                </li>
+                <li class="hidden-xs hidden-sm"><a class="menup" id="dLabelMir" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#" style="width:80px">Мир  <span
+                        class="caret"></span></a><ul class="dropdown-menu" aria-labelledby="dLabelMir">
+                    {% for line in mainmenu[7] %}
+                    <li><a href="/palomnichestvo/tours/{{line.surl}}/{{line.id}}">{{line.title}} от {{line.baseprice}} руб.</a></li>
+                    {% endfor %}
+                    </ul></li>
+                <li class="hidden-xs hidden-sm">
+                    <div class="menudel"></div>
+                </li>-->
+                <li class="hidden-md hidden-sm hidden-xs"><a class="menup" style="width:180px" href="/palomnichestvo/addtour">Добавить поездку</a></li>
+                <li class="hidden-md hidden-sm hidden-xs">
+                    <div class="menudel"></div>
+                </li>
+
+                <li class="menup  navbar-right hidden-xs" style="width:200px; ">
+                    <!--<a id="dLabel2" role="button" data-toggle="collapse" aria-controls="collapseExample"
+                       aria-haspopup="true" aria-expanded="false" href="#collapseExample" id="toursearch">-->
+                    <form class="form-horizontal" action="/palomnichestvo/search/" style="height:40px;padding-top:10px;padding-left:10px">
+                        <div class="form-group form-group-sm">
+                            <label class="col-sm-2" for="searchf" style="padding-top:3px;padding-right:5px"><img
+                                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAABe0lEQVQ4jaWUPUhcQRCAvzsvicIF0hlB0EpBEKJctEhlIhbaaJEu+NOKRar0tjEQQlBEBVttYkggQgioYCekETSIcnhgZaXYHl+K23e8PN/BOzIw7M7OzMewO7M5lYRMANPAEJAHBG6BXWAZqCQTAFAjbVf31B/qqPog4ZtXz9V3ai7mQ62Dnqpn6nSwS+qS+iGRUFS/qp/TQDn1QH2jPlTX1SN1Vu1LJoRKf4X4f0BT6vdwsKauqi0pgLh2qxfqozhoR32lDqi/M0Ai3VLHIzsPlIB94DWwBlRTX+W+/AReREY+rFXgGjjMCAG4AtojowC0hP3HJiAAT4CbeEUVoLdJCMBz4DQO+gLMNAlpBaaAb/UT9bFaVnsyvhbqovoprbPH1BO1KwPkbYgtpoFQJ0Nlc2ohBdChbqjHIa6/ESjq2E21om6r79UVdd/aLC6EEXmpXsZhOe9/IwBtwCDQCdwBZeAkETMCrIdLP856uY102NrX8ux/QRHsz19ayJDpFeZOCAAAAABJRU5ErkJggg=="
+                            />
+                            </label>
+                            <div class="dropdown dropdown-toggle" style="float:right; padding-left:-50px"  data-toggle="dropdown"
+                                 aria-haspopup="true" id="toprt"
+                                   >
+                                <!--  </a>--><input type="search" name="searchf" class="form-control col-md-6" id="searchf"
+                                                    placeholder="найти поездку"/>
+                            </div><ul class="dropdown-menu" id="searchresultzone" aria-labelledby="dLabel6">
+
+                            <span>&nbsp;Пока ничего не найдено</span>
+                        </ul>
+
+                        </div>
+                    </form>
+                </li>
+
+            </ul><!--
+                -->
+
+        </div><!-- /.navbar-collapse -->
+    </div>
+</nav>
+    {% endblock %}
+
+</div>
+{% block bodyblock %}
+{% endblock %}
+
+
+
+
+
+{% include 'el_bodybottom.html' %}
+
+</body>
+</html>

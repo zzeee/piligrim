@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title> {% include 'nov_ihead.html' %}
+</head>
+<body>
+{% include 'nov_bodyhead.html' %}
+
+<h1>святыня</h1>
+<a href="/products">Все продукты</a><br />
+<table>
+    <thead><td>Название</td><td>Описание</td></thead>
+    <tr><td>{{ arr.title }}</td><td>{{ arr.descr }}</td></tr>
+
+</table>
+</body>
+</html>

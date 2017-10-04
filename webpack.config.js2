@@ -1,0 +1,71 @@
+//var SftpWebpackPlugin = require('sftp-webpack-plugin');
+var webpack = require("webpack");
+
+var config = {
+    entry: ['./poffice/index.js',
+    'react-hot-loader/patch',
+    // activate HMR for React
+
+    'webpack-dev-server/client?http://151.248.116.2:8080',
+    // bundle the client for webpack-dev-server
+    // and connect to the provided endpoint
+
+    'webpack/hot/only-dev-server'
+    // bundle the client for hot reloading
+    // only- means to only hot reload for successful updates
+],
+
+    output: {
+        path: './public_html/palomnichestvo/res',
+        filename: 'resindex.js',
+    },
+    devServer: {
+        inline: true,
+        port: 8080
+    },
+
+    module: {
+        loaders: [
+            {
+                test: /\.jsx?$/,
+                exclude: /node_modules/,
+                loader: 'babel',
+
+                query: {
+                    presets: ['es2015', 'react']
+                }
+            },
+            {test: /\.css$/, loader: "style-loader!css-loader"},
+            {test: /\.less$/, loader: "style!css!less"},
+            
+            {test: /\.svg/, loader: 'svg-url-loader'}
+        ]
+    },
+    plugins:
+        [new webpack.DefinePlugin({
+            'process.env': {
+                NODE_ENV: JSON.stringify('production')
+            }
+        })
+            /*, new webpack.optimize.UglifyJsPlugin({minimize: true})*/
+
+
+        ]
+
+
+    /*,
+
+    plugins: [new SftpWebpackPlugin({
+
+        port: '22',
+        host: 'pulcher.timeweb.ru',
+        username: 'zzeeee',
+        password: 'Cgou6LUX',
+        from: './res',
+        to: '/home/z/zzeeee/piligrimServer/public_html/js'
+    })]*/
+
+}
+
+module.exports = config;
+

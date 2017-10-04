@@ -1,0 +1,414 @@
+[2017-08-12 11:29:15] Start paymentAviso
+[2017-08-12 11:29:15] Security type MD5
+[2017-08-12 11:29:15] Request: Array
+(
+    [PHPSESSID] => eae5da23f04909aa89f734440a6259b7
+)
+
+[2017-08-12 11:29:15] String to md5: ;;;;;;;123456
+[2017-08-12 11:29:15] Wait for md5:8277145B5CB840EFF11CC78F175D9ECE, recieved md5: 
+[2017-08-12 11:29:15] Response: <?xml version="1.0" encoding="UTF-8"?><paymentAvisoResponse performedDatetime="2017-08-12T11:29:15.000+00:00" code="1"  invoiceId="" shopId="151"/>
+[2017-08-12 11:33:28] Start paymentAviso
+[2017-08-12 11:33:28] Security type MD5
+[2017-08-12 11:33:28] Request: Array
+(
+    [PHPSESSID] => eae5da23f04909aa89f734440a6259b7
+)
+
+[2017-08-12 11:33:28] String to md5: ;;;;;;;123456
+[2017-08-12 11:33:28] Wait for md5:8277145B5CB840EFF11CC78F175D9ECE, recieved md5: 
+[2017-08-12 11:33:28] Response: <?xml version="1.0" encoding="UTF-8"?><paymentAvisoResponse performedDatetime="2017-08-12T11:33:28.000+00:00" code="1"  invoiceId="" shopId="151"/>
+[2017-08-12 11:34:38] Start paymentAviso
+[2017-08-12 11:34:38] Security type MD5
+[2017-08-12 11:34:38] Request: Array
+(
+    [PHPSESSID] => eae5da23f04909aa89f734440a6259b7
+)
+
+[2017-08-12 11:34:38] String to md5: ;;;;;;;123456
+[2017-08-12 11:34:38] Wait for md5:8277145B5CB840EFF11CC78F175D9ECE, recieved md5: 
+[2017-08-12 11:34:38] Response: <?xml version="1.0" encoding="UTF-8"?><paymentAvisoResponse performedDatetime="2017-08-12T11:34:38.000+00:00" code="1"  invoiceId="" shopId="151"/>
+[2017-08-12 11:35:21] Start paymentAviso
+[2017-08-12 11:35:21] Security type MD5
+[2017-08-12 11:35:21] Request: Array
+(
+    [PHPSESSID] => eae5da23f04909aa89f734440a6259b7
+)
+
+[2017-08-12 11:35:21] String to md5: ;;;;;;;123456
+[2017-08-12 11:35:21] Wait for md5:8277145B5CB840EFF11CC78F175D9ECE, recieved md5: 
+[2017-08-12 11:35:21] Response: <?xml version="1.0" encoding="UTF-8"?><paymentAvisoResponse performedDatetime="2017-08-12T11:35:21.000+00:00" code="1"  invoiceId="" shopId="151"/>
+[2017-08-12 11:35:55] Start paymentAviso
+[2017-08-12 11:35:55] Security type MD5
+[2017-08-12 11:35:55] Request: Array
+(
+    [PHPSESSID] => eae5da23f04909aa89f734440a6259b7
+)
+
+[2017-08-12 11:35:55] String to md5: ;;;;;;;123456
+[2017-08-12 11:35:55] Wait for md5:8277145B5CB840EFF11CC78F175D9ECE, recieved md5: 
+[2017-08-12 11:35:55] Response: <?xml version="1.0" encoding="UTF-8"?><paymentAvisoResponse performedDatetime="2017-08-12T11:35:55.000+00:00" code="1"  invoiceId="" shopId="151"/>
+[2017-08-12 11:36:29] Start paymentAviso
+[2017-08-12 11:36:29] Security type MD5
+[2017-08-12 11:36:29] Request: Array
+(
+    [PHPSESSID] => eae5da23f04909aa89f734440a6259b7
+    [invoiceId] => 
+)
+
+[2017-08-12 11:36:29] String to md5: ;;;;;;;123456
+[2017-08-12 11:36:29] Wait for md5:8277145B5CB840EFF11CC78F175D9ECE, recieved md5: 
+[2017-08-12 11:36:29] Response: <?xml version="1.0" encoding="UTF-8"?><paymentAvisoResponse performedDatetime="2017-08-12T11:36:29.000+00:00" code="1"  invoiceId="" shopId="151"/>
+[2017-08-12 11:36:40] Start checkOrder
+[2017-08-12 11:36:40] Security type MD5
+[2017-08-12 11:36:40] Request: Array
+(
+    [PHPSESSID] => eae5da23f04909aa89f734440a6259b7
+    [invoiceId] => 
+)
+
+[2017-08-12 11:36:40] String to md5: ;;;;;;;123456
+[2017-08-12 11:36:40] Wait for md5:8277145B5CB840EFF11CC78F175D9ECE, recieved md5: 
+[2017-08-12 11:36:40] Response: <?xml version="1.0" encoding="UTF-8"?><checkOrderResponse performedDatetime="2017-08-12T11:36:40.000+00:00" code="1"  invoiceId="" shopId="151"/>
+[2017-08-12 11:36:50] Start checkOrder
+[2017-08-12 11:36:50] Security type MD5
+[2017-08-12 11:36:50] Request: Array
+(
+    [PHPSESSID] => eae5da23f04909aa89f734440a6259b7
+    [invoiceId] => 
+)
+
+[2017-08-12 11:36:50] String to md5: ;;;;;;;123456
+[2017-08-12 11:36:50] Wait for md5:8277145B5CB840EFF11CC78F175D9ECE, recieved md5: 
+[2017-08-12 11:36:50] Response: <?xml version="1.0" encoding="UTF-8"?><checkOrderResponse performedDatetime="2017-08-12T11:36:50.000+00:00" code="1"  invoiceId="" shopId="151"/>
+[2017-08-12 11:39:52] Start checkOrder
+[2017-08-12 11:39:52] Security type MD5
+[2017-08-12 11:39:52] Request: Array
+(
+    [PHPSESSID] => eae5da23f04909aa89f734440a6259b7
+    [invoiceId] => 
+)
+
+[2017-08-12 11:39:52] String to md5: ;;;;;;;123456
+[2017-08-12 11:39:52] Wait for md5:8277145B5CB840EFF11CC78F175D9ECE, recieved md5: 
+[2017-08-12 11:39:52] Response: <?xml version="1.0" encoding="UTF-8"?><checkOrderResponse performedDatetime="2017-08-12T11:39:52.000+00:00" code="1"  invoiceId="" shopId="151"/>
+[2017-08-12 11:40:04] Start checkOrder
+[2017-08-12 11:40:04] Security type MD5
+[2017-08-12 11:40:04] Request: Array
+(
+    [PHPSESSID] => eae5da23f04909aa89f734440a6259b7
+    [invoiceId] => 
+)
+
+[2017-08-12 11:40:04] String to md5: ;;;;;;;123456
+[2017-08-12 11:40:04] Wait for md5:8277145B5CB840EFF11CC78F175D9ECE, recieved md5: 
+[2017-08-12 11:40:04] Response: <?xml version="1.0" encoding="UTF-8"?><checkOrderResponse performedDatetime="2017-08-12T11:40:04.000+00:00" code="1"  invoiceId="" shopId="151"/>
+[2017-08-12 11:40:06] Start checkOrder
+[2017-08-12 11:40:06] Security type MD5
+[2017-08-12 11:40:06] Request: Array
+(
+    [PHPSESSID] => eae5da23f04909aa89f734440a6259b7
+    [invoiceId] => 
+)
+
+[2017-08-12 11:40:06] String to md5: ;;;;;;;123456
+[2017-08-12 11:40:06] Wait for md5:8277145B5CB840EFF11CC78F175D9ECE, recieved md5: 
+[2017-08-12 11:40:06] Response: <?xml version="1.0" encoding="UTF-8"?><checkOrderResponse performedDatetime="2017-08-12T11:40:06.000+00:00" code="1"  invoiceId="" shopId="151"/>
+[2017-08-12 11:40:48] Start checkOrder
+[2017-08-12 11:40:48] Security type MD5
+[2017-08-12 11:40:48] Request: Array
+(
+    [PHPSESSID] => eae5da23f04909aa89f734440a6259b7
+    [invoiceId] => 
+)
+
+[2017-08-12 11:40:48] String to md5: ;;;;;;;123456
+[2017-08-12 11:40:48] Wait for md5:8277145B5CB840EFF11CC78F175D9ECE, recieved md5: 
+[2017-08-12 11:40:48] Response: <?xml version="1.0" encoding="UTF-8"?><checkOrderResponse performedDatetime="2017-08-12T11:40:48.000+00:00" code="1"  invoiceId="" shopId="151"/>
+[2017-08-16 06:20:40] Start checkOrder
+[2017-08-16 06:20:40] Security type MD5
+[2017-08-16 06:20:40] Request: Array
+(
+    [PHPSESSID] => 366dde45ce344b12ab0c5deee45742ed
+    [invoiceId] => 
+)
+
+[2017-08-16 06:20:40] String to md5: ;;;;;;;123456
+[2017-08-16 06:20:40] Wait for md5:8277145B5CB840EFF11CC78F175D9ECE, recieved md5: 
+[2017-08-16 06:20:40] Response: <?xml version="1.0" encoding="UTF-8"?><checkOrderResponse performedDatetime="2017-08-16T06:20:40.000+00:00" code="1"  invoiceId="" shopId="141183"/>
+[2017-08-16 06:21:40] Start paymentAviso
+[2017-08-16 06:21:40] Security type MD5
+[2017-08-16 06:21:40] Request: Array
+(
+    [PHPSESSID] => 366dde45ce344b12ab0c5deee45742ed
+    [invoiceId] => 
+)
+
+[2017-08-16 06:21:40] String to md5: ;;;;;;;123456
+[2017-08-16 06:21:40] Wait for md5:8277145B5CB840EFF11CC78F175D9ECE, recieved md5: 
+[2017-08-16 06:21:40] Response: <?xml version="1.0" encoding="UTF-8"?><paymentAvisoResponse performedDatetime="2017-08-16T06:21:40.000+00:00" code="1"  invoiceId="" shopId="141183"/>
+[2017-08-22 05:44:10] Start checkOrder
+[2017-08-22 05:44:10] Security type MD5
+[2017-08-22 05:44:10] Request: Array
+(
+    [PHPSESSID] => 4d738ab30a18889cc27cae173811b124
+    [invoiceId] => 
+)
+
+[2017-08-22 05:44:10] String to md5: ;;;;;;;123456
+[2017-08-22 05:44:10] Wait for md5:8277145B5CB840EFF11CC78F175D9ECE, recieved md5: 
+[2017-08-22 05:44:10] Response: <?xml version="1.0" encoding="UTF-8"?><checkOrderResponse performedDatetime="2017-08-22T05:44:10.000+00:00" code="1"  invoiceId="" shopId="141183"/>
+[2017-08-22 20:34:20] Start checkOrder
+[2017-08-22 20:34:20] Security type MD5
+[2017-08-22 20:34:20] Request: Array
+(
+    [orderNumber] => 820
+    [orderSumAmount] => 600.00
+    [cdd_exp_date] => 1225
+    [shopArticleId] => 443960
+    [paymentPayerCode] => 4100322062290
+    [cdd_rrn] => 122495078062
+    [external_id] => deposit
+    [paymentType] => AC
+    [requestDatetime] => 2017-08-22T23:32:49.953+03:00
+    [depositNumber] => -idb8woQDxTmzLIKZNtevFPzCTwZ.001f.201708
+    [nst_eplPayment] => true
+    [cdd_response_code] => 00
+    [cps_user_country_code] => PL
+    [orderCreatedDatetime] => 2017-08-22T23:32:49.822+03:00
+    [sk] => u0c65a00558e0320e6680c9962750240a
+    [action] => checkOrder
+    [shopId] => 141183
+    [scid] => 557231
+    [shopSumBankPaycash] => 1003
+    [shopSumCurrencyPaycash] => 10643
+    [rebillingOn] => false
+    [orderSumBankPaycash] => 1003
+    [cps_region_id] => 213
+    [orderSumCurrencyPaycash] => 10643
+    [merchant_order_id] => 820_220817233214_00000_141183
+    [unilabel] => 212ea88d-0009-5000-8000-00002519f194
+    [cdd_pan_mask] => 444444|4448
+    [customerNumber] => 4355
+    [custName] => 
+    [orderDetails] => Оплата заказа:820
+    [yandexPaymentId] => 25700106365938
+    [environment] => Live
+    [custEmail] => 
+    [invoiceId] => 2000001434313
+    [shopSumAmount] => 579.00
+    [md5] => 5B0737823A75411FE626933794ACB907
+)
+
+[2017-08-22 20:34:20] String to md5: checkOrder;600.00;10643;1003;141183;2000001434313;4355;123456
+[2017-08-22 20:34:20] Wait for md5:BEBBEBD2EC681A725D74AA11B070E227, recieved md5: 5B0737823A75411FE626933794ACB907
+[2017-08-22 20:34:20] Response: <?xml version="1.0" encoding="UTF-8"?><checkOrderResponse performedDatetime="2017-08-22T20:34:20.000+00:00" code="1"  invoiceId="2000001434313" shopId="141183"/>
+[2017-08-22 20:42:14] Start checkOrder
+[2017-08-22 20:42:14] Security type MD5
+[2017-08-22 20:42:14] Request: Array
+(
+    [orderNumber] => 820
+    [orderSumAmount] => 600.00
+    [cdd_exp_date] => 1225
+    [shopArticleId] => 443960
+    [paymentPayerCode] => 4100322062290
+    [cdd_rrn] => 596535305539
+    [external_id] => deposit
+    [paymentType] => AC
+    [requestDatetime] => 2017-08-22T23:40:44.007+03:00
+    [depositNumber] => GwwsLZxm4LhTRMb5tiOtkayj8tIZ.001f.201708
+    [nst_eplPayment] => true
+    [cdd_response_code] => 00
+    [cps_user_country_code] => PL
+    [orderCreatedDatetime] => 2017-08-22T23:40:43.870+03:00
+    [sk] => u0c65a00558e0320e6680c9962750240a
+    [action] => checkOrder
+    [shopId] => 141183
+    [scid] => 557231
+    [shopSumBankPaycash] => 1003
+    [shopSumCurrencyPaycash] => 10643
+    [rebillingOn] => false
+    [orderSumBankPaycash] => 1003
+    [cps_region_id] => 213
+    [orderSumCurrencyPaycash] => 10643
+    [merchant_order_id] => 820_220817234018_00000_141183
+    [unilabel] => 212eaa72-0009-5000-8000-00002519fcec
+    [cdd_pan_mask] => 444444|4448
+    [customerNumber] => 4355
+    [custName] => 
+    [orderDetails] => Оплата заказа:820
+    [yandexPaymentId] => 25700106367664
+    [environment] => Live
+    [custEmail] => 
+    [invoiceId] => 2000001434313
+    [shopSumAmount] => 579.00
+    [md5] => 5B0737823A75411FE626933794ACB907
+    [PHPSESSID] => 6ce8f56b5144293cb1dba9f4080c7e70
+)
+
+[2017-08-22 20:42:14] String to md5: checkOrder;600.00;10643;1003;141183;2000001434313;4355;123456
+[2017-08-22 20:42:14] Wait for md5:BEBBEBD2EC681A725D74AA11B070E227, recieved md5: 5B0737823A75411FE626933794ACB907
+[2017-08-22 20:42:14] Response: <?xml version="1.0" encoding="UTF-8"?><checkOrderResponse performedDatetime="2017-08-22T20:42:14.000+00:00" code="1"  invoiceId="2000001434313" shopId="141183"/>
+[2017-08-22 20:43:38] Start checkOrder
+[2017-08-22 20:43:38] Security type MD5
+[2017-08-22 20:43:38] Request: Array
+(
+    [orderNumber] => 820
+    [orderSumAmount] => 600.00
+    [cdd_exp_date] => 1225
+    [shopArticleId] => 443960
+    [paymentPayerCode] => 4100322062290
+    [cdd_rrn] => 680420602540
+    [external_id] => deposit
+    [paymentType] => AC
+    [requestDatetime] => 2017-08-22T23:42:07.896+03:00
+    [depositNumber] => nOWGLdPNeX8JtJCbbncbDxLdClYZ.001f.201708
+    [nst_eplPayment] => true
+    [cdd_response_code] => 00
+    [cps_user_country_code] => PL
+    [orderCreatedDatetime] => 2017-08-22T23:42:07.764+03:00
+    [sk] => u0c65a00558e0320e6680c9962750240a
+    [action] => checkOrder
+    [shopId] => 141183
+    [scid] => 557231
+    [shopSumBankPaycash] => 1003
+    [shopSumCurrencyPaycash] => 10643
+    [rebillingOn] => false
+    [orderSumBankPaycash] => 1003
+    [cps_region_id] => 213
+    [orderSumCurrencyPaycash] => 10643
+    [merchant_order_id] => 820_220817234201_00000_141183
+    [unilabel] => 212eaa72-0009-5000-8000-00002519fcec
+    [cdd_pan_mask] => 444444|4448
+    [customerNumber] => 4355
+    [custName] => 
+    [orderDetails] => Оплата заказа:820
+    [yandexPaymentId] => 25700106367976
+    [environment] => Live
+    [custEmail] => 
+    [invoiceId] => 2000001434313
+    [shopSumAmount] => 579.00
+    [md5] => 5B0737823A75411FE626933794ACB907
+    [PHPSESSID] => 6ce8f56b5144293cb1dba9f4080c7e70
+)
+
+[2017-08-22 20:43:38] String to md5: checkOrder;600.00;10643;1003;141183;2000001434313;4355;123456
+[2017-08-22 20:43:38] Wait for md5:BEBBEBD2EC681A725D74AA11B070E227, recieved md5: 5B0737823A75411FE626933794ACB907
+[2017-08-22 20:43:38] Response: <?xml version="1.0" encoding="UTF-8"?><checkOrderResponse performedDatetime="2017-08-22T20:43:38.000+00:00" code="1"  invoiceId="2000001434313" shopId="141183"/>
+[2017-08-22 20:45:12] Start checkOrder
+[2017-08-22 20:45:12] Security type MD5
+[2017-08-22 20:45:12] Request: Array
+(
+    [orderNumber] => 820
+    [orderSumAmount] => 600.00
+    [cdd_exp_date] => 1225
+    [shopArticleId] => 443960
+    [paymentPayerCode] => 4100322062290
+    [cdd_rrn] => 774388345447
+    [external_id] => deposit
+    [paymentType] => AC
+    [requestDatetime] => 2017-08-22T23:43:41.836+03:00
+    [depositNumber] => raJsluLYEAic0ojEaBdjhux_cXoZ.001f.201708
+    [nst_eplPayment] => true
+    [cdd_response_code] => 00
+    [cps_user_country_code] => PL
+    [orderCreatedDatetime] => 2017-08-22T23:43:41.709+03:00
+    [sk] => u0c65a00558e0320e6680c9962750240a
+    [action] => checkOrder
+    [shopId] => 141183
+    [scid] => 557231
+    [shopSumBankPaycash] => 1003
+    [shopSumCurrencyPaycash] => 10643
+    [rebillingOn] => false
+    [orderSumBankPaycash] => 1003
+    [cps_region_id] => 213
+    [orderSumCurrencyPaycash] => 10643
+    [merchant_order_id] => 820_220817234337_00000_141183
+    [unilabel] => 212eaa72-0009-5000-8000-00002519fcec
+    [cdd_pan_mask] => 444444|4448
+    [customerNumber] => 4355
+    [custName] => 
+    [orderDetails] => Оплата заказа:820
+    [yandexPaymentId] => 25700106368442
+    [environment] => Live
+    [custEmail] => 
+    [invoiceId] => 2000001434313
+    [shopSumAmount] => 579.00
+    [md5] => 5B0737823A75411FE626933794ACB907
+    [PHPSESSID] => 6ce8f56b5144293cb1dba9f4080c7e70
+)
+
+[2017-08-22 20:45:12] String to md5: checkOrder;600.00;10643;1003;141183;2000001434313;4355;123456
+[2017-08-22 20:45:12] Wait for md5:BEBBEBD2EC681A725D74AA11B070E227, recieved md5: 5B0737823A75411FE626933794ACB907
+[2017-08-22 20:45:12] Response: <?xml version="1.0" encoding="UTF-8"?><checkOrderResponse performedDatetime="2017-08-22T20:45:12.000+00:00" code="1"  invoiceId="2000001434313" shopId="141183"/>
+[2017-08-22 20:47:42] String to md5: checkOrder;600.00;10643;1003;141183;2000001434313;4355;123456
+[2017-08-22 20:47:42] Wait for md5:BEBBEBD2EC681A725D74AA11B070E227, recieved md5: 5B0737823A75411FE626933794ACB907
+[2017-08-22 20:47:42] Response: <?xml version="1.0" encoding="UTF-8"?><checkOrderResponse performedDatetime="2017-08-22T20:47:42.000+00:00" code="1"  invoiceId="2000001434313" shopId="141183"/>
+[2017-08-22 20:48:55] String to md5: checkOrder;600.00;10643;1003;141183;2000001434313;4355;123456
+[2017-08-22 20:48:55] Wait for md5:BEBBEBD2EC681A725D74AA11B070E227, recieved md5: 5B0737823A75411FE626933794ACB907
+[2017-08-22 20:48:55] Response: <?xml version="1.0" encoding="UTF-8"?><checkOrderResponse performedDatetime="2017-08-22T20:48:55.000+00:00" code="1"  invoiceId="2000001434313" shopId="141183"/>
+[2017-08-22 20:50:08] String to md5: checkOrder;600.00;10643;1003;141183;2000001434313;4355;123456
+[2017-08-22 20:50:08] Wait for md5:BEBBEBD2EC681A725D74AA11B070E227, recieved md5: 5B0737823A75411FE626933794ACB907
+[2017-08-22 20:50:08] Response: <?xml version="1.0" encoding="UTF-8"?><checkOrderResponse performedDatetime="2017-08-22T20:50:08.000+00:00" code="1"  invoiceId="2000001434313" shopId="141183"/>
+[2017-08-22 20:51:30] String to md5: checkOrder;600.00;10643;1003;141183;2000001434313;4355;123456
+[2017-08-22 20:51:30] Wait for md5:BEBBEBD2EC681A725D74AA11B070E227, recieved md5: 5B0737823A75411FE626933794ACB907
+[2017-08-22 20:51:30] Response: <?xml version="1.0" encoding="UTF-8"?><checkOrderResponse performedDatetime="2017-08-22T20:51:30.000+00:00" code="1"  invoiceId="2000001434313" shopId="141183"/>
+[2017-08-22 20:54:34] String to md5: checkOrder;600.00;10643;1003;141183;2000001434313;4355;123456
+[2017-08-22 20:54:34] Wait for md5:BEBBEBD2EC681A725D74AA11B070E227, recieved md5: 5B0737823A75411FE626933794ACB907
+[2017-08-22 20:54:34] Response: <?xml version="1.0" encoding="UTF-8"?><checkOrderResponse performedDatetime="2017-08-22T20:54:34.000+00:00" code="1"  invoiceId="2000001434313" shopId="141183"/>
+[2017-08-22 20:56:50] String to md5: checkOrder;600.00;10643;1003;141183;2000001434313;4355;123456
+[2017-08-22 20:56:50] Wait for md5:BEBBEBD2EC681A725D74AA11B070E227, recieved md5: 5B0737823A75411FE626933794ACB907
+[2017-08-22 20:56:50] Response: <?xml version="1.0" encoding="UTF-8"?><checkOrderResponse performedDatetime="2017-08-22T20:56:50.000+00:00" code="1"  invoiceId="2000001434313" shopId="141183"/>
+[2017-08-22 21:04:20] String to md5: checkOrder;600.00;10643;1003;141183;2000001434313;4355;трампам
+[2017-08-22 21:04:20] Wait for md5:A420468656B08D523F6E13A898B48BD6, recieved md5: 5B0737823A75411FE626933794ACB907
+[2017-08-22 21:04:20] Response: <?xml version="1.0" encoding="UTF-8"?><checkOrderResponse performedDatetime="2017-08-22T21:04:20.000+00:00" code="1"  invoiceId="2000001434313" shopId="141183"/>
+[2017-08-22 21:09:16] Response: <?xml version="1.0" encoding="UTF-8"?><checkOrderResponse performedDatetime="2017-08-22T21:09:16.000+00:00" code="0"  invoiceId="2000001434313" shopId="141183"/>
+[2017-08-22 21:09:17] Response: <?xml version="1.0" encoding="UTF-8"?><paymentAvisoResponse performedDatetime="2017-08-22T21:09:17.000+00:00" code="0"  invoiceId="2000001434313" shopId="141183"/>
+[2017-08-22 21:22:01] Response: <?xml version="1.0" encoding="UTF-8"?><checkOrderResponse performedDatetime="2017-08-22T21:22:01.000+00:00" code="0"  invoiceId="2000001434482" shopId="141183"/>
+[2017-08-22 21:22:01] Response: <?xml version="1.0" encoding="UTF-8"?><paymentAvisoResponse performedDatetime="2017-08-22T21:22:01.000+00:00" code="0"  invoiceId="2000001434482" shopId="141183"/>
+[2017-08-22 21:24:43] Response: <?xml version="1.0" encoding="UTF-8"?><checkOrderResponse performedDatetime="2017-08-22T21:24:43.000+00:00" code="0"  invoiceId="2000001434490" shopId="141183"/>
+[2017-08-22 21:24:43] Response: <?xml version="1.0" encoding="UTF-8"?><paymentAvisoResponse performedDatetime="2017-08-22T21:24:43.000+00:00" code="0"  invoiceId="2000001434490" shopId="141183"/>
+[2017-08-22 21:28:06] Response: <?xml version="1.0" encoding="UTF-8"?><checkOrderResponse performedDatetime="2017-08-22T21:28:06.000+00:00" code="0"  invoiceId="2000001434503" shopId="141183"/>
+[2017-08-22 21:28:06] Response: <?xml version="1.0" encoding="UTF-8"?><paymentAvisoResponse performedDatetime="2017-08-22T21:28:06.000+00:00" code="0"  invoiceId="2000001434503" shopId="141183"/>
+[2017-08-22 21:33:44] Response: <?xml version="1.0" encoding="UTF-8"?><checkOrderResponse performedDatetime="2017-08-22T21:33:44.000+00:00" code="0"  invoiceId="2000001434520" shopId="141183"/>
+[2017-08-22 21:33:45] Response: <?xml version="1.0" encoding="UTF-8"?><paymentAvisoResponse performedDatetime="2017-08-22T21:33:45.000+00:00" code="0"  invoiceId="2000001434520" shopId="141183"/>
+[2017-08-22 21:37:01] Response: <?xml version="1.0" encoding="UTF-8"?><checkOrderResponse performedDatetime="2017-08-22T21:37:01.000+00:00" code="0"  invoiceId="2000001434533" shopId="141183"/>
+[2017-08-22 21:37:02] Response: <?xml version="1.0" encoding="UTF-8"?><paymentAvisoResponse performedDatetime="2017-08-22T21:37:02.000+00:00" code="0"  invoiceId="2000001434533" shopId="141183"/>
+[2017-08-23 12:08:22] Response: <?xml version="1.0" encoding="UTF-8"?><checkOrderResponse performedDatetime="2017-08-23T12:08:22.000+00:00" code="0"  invoiceId="2000001437796" shopId="141183"/>
+[2017-08-23 12:08:23] Response: <?xml version="1.0" encoding="UTF-8"?><paymentAvisoResponse performedDatetime="2017-08-23T12:08:23.000+00:00" code="0"  invoiceId="2000001437796" shopId="141183"/>
+[2017-08-23 14:41:36] String to md5: checkOrder;600.00;10643;1003;141183;2000001438420;4291;trampam
+[2017-08-23 14:41:36] Response: <?xml version="1.0" encoding="UTF-8"?><checkOrderResponse performedDatetime="2017-08-23T14:41:36.000+00:00" code="0"  invoiceId="2000001438420" shopId="141183"/>
+[2017-08-23 14:41:36] String to md5: paymentAviso;600.00;10643;1003;141183;2000001438420;4291;trampam
+[2017-08-23 14:41:37] Response: <?xml version="1.0" encoding="UTF-8"?><paymentAvisoResponse performedDatetime="2017-08-23T14:41:37.000+00:00" code="0"  invoiceId="2000001438420" shopId="141183"/>
+[2017-08-23 20:34:25] String to md5: checkOrder;2000.00;10643;1003;141183;2000001439720;4347;trampam
+[2017-08-23 20:34:25] Response: <?xml version="1.0" encoding="UTF-8"?><checkOrderResponse performedDatetime="2017-08-23T20:34:25.000+00:00" code="0"  invoiceId="2000001439720" shopId="141183"/>
+[2017-08-23 20:34:25] String to md5: paymentAviso;2000.00;10643;1003;141183;2000001439720;4347;trampam
+[2017-08-23 20:34:26] Response: <?xml version="1.0" encoding="UTF-8"?><paymentAvisoResponse performedDatetime="2017-08-23T20:34:26.000+00:00" code="0"  invoiceId="2000001439720" shopId="141183"/>
+[2017-08-23 21:14:04] String to md5: checkOrder;500.00;10643;1003;141183;2000001439860;1788;trampam
+[2017-08-23 21:14:04] Response: <?xml version="1.0" encoding="UTF-8"?><checkOrderResponse performedDatetime="2017-08-23T21:14:04.000+00:00" code="0"  invoiceId="2000001439860" shopId="141183"/>
+[2017-08-23 21:14:04] String to md5: paymentAviso;500.00;10643;1003;141183;2000001439860;1788;trampam
+[2017-08-23 21:14:04] Response: <?xml version="1.0" encoding="UTF-8"?><paymentAvisoResponse performedDatetime="2017-08-23T21:14:04.000+00:00" code="0"  invoiceId="2000001439860" shopId="141183"/>
+[2017-08-23 21:19:47] String to md5: checkOrder;500.00;10643;1003;141183;2000001439879;1788;trampam
+[2017-08-23 21:19:47] Response: <?xml version="1.0" encoding="UTF-8"?><checkOrderResponse performedDatetime="2017-08-23T21:19:47.000+00:00" code="0"  invoiceId="2000001439879" shopId="141183"/>
+[2017-08-23 21:19:48] String to md5: paymentAviso;500.00;10643;1003;141183;2000001439879;1788;trampam
+[2017-08-23 21:19:48] Response: <?xml version="1.0" encoding="UTF-8"?><paymentAvisoResponse performedDatetime="2017-08-23T21:19:48.000+00:00" code="0"  invoiceId="2000001439879" shopId="141183"/>
+[2017-08-26 03:21:39] String to md5: checkOrder;500.00;10643;1003;141183;2000001451528;1788;trampam
+[2017-08-26 03:21:39] Response: <?xml version="1.0" encoding="UTF-8"?><checkOrderResponse performedDatetime="2017-08-26T03:21:39.000+00:00" code="0"  invoiceId="2000001451528" shopId="141183"/>
+[2017-08-26 03:21:40] String to md5: paymentAviso;500.00;10643;1003;141183;2000001451528;1788;trampam
+[2017-08-26 03:21:40] Response: <?xml version="1.0" encoding="UTF-8"?><paymentAvisoResponse performedDatetime="2017-08-26T03:21:40.000+00:00" code="0"  invoiceId="2000001451528" shopId="141183"/>
+[2017-08-27 06:28:05] String to md5: checkOrder;500.00;10643;1003;141183;2000001455608;346;trampam
+[2017-08-27 06:28:05] Response: <?xml version="1.0" encoding="UTF-8"?><checkOrderResponse performedDatetime="2017-08-27T06:28:05.000+00:00" code="0"  invoiceId="2000001455608" shopId="141183"/>
+[2017-08-27 06:28:06] String to md5: paymentAviso;500.00;10643;1003;141183;2000001455608;346;trampam
+[2017-08-27 06:28:06] Response: <?xml version="1.0" encoding="UTF-8"?><paymentAvisoResponse performedDatetime="2017-08-27T06:28:06.000+00:00" code="0"  invoiceId="2000001455608" shopId="141183"/>
+[2017-08-28 04:34:33] String to md5: checkOrder;500.00;10643;1003;141183;2000001458555;4346;trampam
+[2017-08-28 04:34:33] Response: <?xml version="1.0" encoding="UTF-8"?><checkOrderResponse performedDatetime="2017-08-28T04:34:33.000+00:00" code="0"  invoiceId="2000001458555" shopId="141183"/>
+[2017-08-28 04:34:33] String to md5: paymentAviso;500.00;10643;1003;141183;2000001458555;4346;trampam
+[2017-08-28 04:34:34] Response: <?xml version="1.0" encoding="UTF-8"?><paymentAvisoResponse performedDatetime="2017-08-28T04:34:34.000+00:00" code="0"  invoiceId="2000001458555" shopId="141183"/>
+[2017-08-28 13:10:27] String to md5: checkOrder;500.00;10643;1003;141183;2000001460063;373;trampam
+[2017-08-28 13:10:27] Response: <?xml version="1.0" encoding="UTF-8"?><checkOrderResponse performedDatetime="2017-08-28T13:10:27.000+00:00" code="0"  invoiceId="2000001460063" shopId="141183"/>
+[2017-08-28 13:10:27] String to md5: paymentAviso;500.00;10643;1003;141183;2000001460063;373;trampam
+[2017-08-28 13:10:28] Response: <?xml version="1.0" encoding="UTF-8"?><paymentAvisoResponse performedDatetime="2017-08-28T13:10:28.000+00:00" code="0"  invoiceId="2000001460063" shopId="141183"/>
+[2017-08-28 18:29:19] String to md5: checkOrder;500.00;10643;1003;141183;2000001462412;346;trampam
+[2017-08-28 18:29:19] Response: <?xml version="1.0" encoding="UTF-8"?><checkOrderResponse performedDatetime="2017-08-28T18:29:19.000+00:00" code="0"  invoiceId="2000001462412" shopId="141183"/>
+[2017-08-28 18:29:19] String to md5: paymentAviso;500.00;10643;1003;141183;2000001462412;346;trampam
+[2017-08-28 18:29:20] Response: <?xml version="1.0" encoding="UTF-8"?><paymentAvisoResponse performedDatetime="2017-08-28T18:29:20.000+00:00" code="0"  invoiceId="2000001462412" shopId="141183"/>

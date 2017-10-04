@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title> {% include 'nov_ihead.html' %}
+</head>
+<body>
+{% include 'nov_bodyhead.html' %}
+
+<h1>Список З</h1>
+<table>
+    <thead><td>Название</td><td>Описание</td></thead>
+    {% for line in dataarr %}
+    <tr><td style="color:Red"><a href="/orders/{{ line.id }}">{{ line.fio }}</a></td><td>{{ line.phone }}</td></tr>
+    {% endfor %}
+</table>
+</body>
+</html>

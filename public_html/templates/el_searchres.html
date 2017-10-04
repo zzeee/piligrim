@@ -1,0 +1,48 @@
+{% extends "el_basetemplate.html" %}
+{% block bodyblock %}
+<div class="container">
+
+    <h1>{{ title}}</h1>
+    {% set a=1 %}
+    {% if arr|length>0%}
+
+
+    <ul>
+        {% for line in arr %}
+
+        <li>
+            {% if line.type in [1,2,3] %}
+            {% set a=2 %}
+            {% if line.type==1 %}
+            <a href="/palomnichestvo/{{line.surl}}/{{line.id}}">{{line.name}}</a><br/>
+            {{line.main_descr}}<br/>{{line.descr}}
+            {% endif %}
+
+            {% if line.type==2 %}
+            <a href="/palomnichestvo/tours/{{line.surl}}/{{line.id}}">{{line.name}}
+            </a><br/>
+            {{line.main_descr}}<br/>{{line.descr}}
+            {% endif %}
+
+            {% if line.type==3 %}
+            <a href="/palomnichestvo/tours/{{line.surl}}/{{line.var1}}?date={{line.id}}">{{line.name}}<br/></a>
+            {{line.main_descr}}<br/>Особенности поездки:{{line.descr}}
+            {% endif %}
+        </li>
+
+
+        {% endif %}{%
+        else%}
+        {% if a==1 %}
+        <h2>Ничего не найдено</h2>
+        {% endif %}
+
+        {% endfor %}
+    </ul>
+    {% else %}
+    <h2>Ничего не найдено</h2>
+    {% endif %}
+
+
+</div>
+{% endblock %}

@@ -1,0 +1,298 @@
+{% extends "el_basetemplate.html" %}
+{% block seo %}
+<meta name="google-site-verification" content="yA7z9SFtX3040MqCJySkbqWQs_Et4aXQdw9GTTGrD_s" />
+
+{% endblock %}
+{% block bodyblock %}
+<div class="container">
+    <div class="row hidden-xs hidden-sm">
+        <div class="my-flex-container">
+            <div class="my-flex-block1"><span class="selcity">Выбрать город:</span></div>
+            {% for lineq in points %}
+            <div class="my-flex-block"><a class="corcity" href="/palomnichestvo/points/{{lineq.url}}{{lineq.tname}}">{{lineq.name}}</a>
+            </div>
+
+            {% endfor%}
+            <div class="my-flex-block"><a class="alldir" href="/palomnichestvo/points">Все направления</a></div>
+        </div>
+        <br/>
+    </div>
+    <!-горизонтальные блоки. -->
+    <!--ближайшие поездки (топ-4)-->
+    <div class="row">
+
+    <div class="container">
+        <div class="bgreen col-md-12"><span class="bestdir lh38">Ближайшие поездки</span></div>
+    </div>
+    </div>
+    <div class="row">
+
+    {% for line2 in toplist %}
+
+        <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12" style="z-index:1">
+            <div class="thumbnail text-left">
+                <div class="caption">
+                    <div class="row">
+                        <span class="p15"><img src="/palomnichestvo/imgi/{{line2.flagurl}}" vspace="2"/> <span
+                                class="lh22center" >{{line2.countryname}}</span></span>
+                        <div class="datebirk" class="fright">
+                            <div class="mtop5"></div>
+                            <div class="dmonth">{{line2.ddate}}</div>
+                            <div class="ddmonth">{{month[line2.mdate]}}</div>
+                            <div class="triangletop"></div>
+                        </div>
+                        <h3 class="tourbartop">{{line2.title}}</h3>
+                    </div>
+                </div>
+                <a class="bodycard" href="/palomnichestvo/tours/{{line2.surl}}/{{line2.id}}">
+                    <span class="typeb"><span class="typebirk">&nbsp;{{line2.typname}}&nbsp;</span></span>
+                    <span class="birklay"><span
+                            class="len1birk">&nbsp;{{line2.breslength}}{% if line2.bresnight|length>0 %}/{{line2.bresnight}}{% endif %}&nbsp;</span></span>
+                    <img src="/palomnichestvo/img/{{line2.gallery}}" align="left"
+                         class="img-responsive" alt="...">
+                    {% if line2.main_descr|length>0 %}
+                    <div class="gdesc2"><div class="gdesc"></div>   {{line2.main_descr|raw}}</div>{% else%}
+                    <div style="padding-top:20px"></div>
+                    {% endif %}
+
+                </a>
+                <div class="hidden-xs thinline mtop5"></div>
+                <div class="h5line"></div>
+
+                <div class="pricebron">
+                    <div class="row text-justify">
+                        <span class="tprice fleft"
+                              style="padding-top:5px; margin-left:25px">От {{line2.baseprice}} &#8381;</span>
+                        <span class="text-right fright" style="padding-bottom:10px; padding-top:5px;padding-right:30px"><button
+                                href="#" class="btn btn-primary prm order"
+                                id={{line2.id}}
+                                role="button">Забронировать</button><span class="showtour" data-attr="{{line2.id}}"></span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+    <div class="row">
+        <div class="container">
+            <div class="bgreen col-md-12"><span class="bestdir lh38">О святых местах</span></div>
+        </div>
+
+        {% for sline in mainsaints %}
+        <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12 noa">
+
+            <div class="thumbnail " style="">
+                <div class="caption">
+                    <div class="row">
+                        <span class="p15"><img src="imgi/{{sline.flagurl}}" vspace="2"/> <span class="lh22center">{{sline.countryname}}</span></span>
+                    </div>
+                    <h3 class="tourbarmon">{{sline.name}}</h3>
+                </div>
+                <a href="/palomnichestvo/sp/{{sline.surl}}{{sline.tname}}">
+                    <img style="min-height:300px" src="/palomnichestvo/img/{{sline.gallery}}" class="img-responsive  " alt="...">
+                    {% if sline.descr|length>0 %}<div class="gdesc"></div>
+                    <div class="gdesc2">{{sline.descr}}</div>{% else%}
+                    <div style="padding-top:20px"></div>
+                    {% endif %}
+                </a>
+                <div style="width:100%;text-align:center"><a href="/palomnichestvo/sp/{{sline.surl}}{{sline.tname}}"
+                                                             role="button"
+                                                             class="btn btn-info">Подробнее</a></div>
+                <div class="mtop5"></div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="row">
+        <div class="container">
+            <div class="bgreen col-md-12"><span class="bestdir lh38">Города</span></div>
+        </div>
+
+        {% for sline in topcities %}
+        <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12 noa">
+
+            <div class="thumbnail" style="">
+                <div class="caption">
+                    <div class="row">
+                        <span class="p15"><img src="imgi/{{sline.flagurl}}" vspace="2"/> <span class="lh22center">{{sline.countryname}}</span></span>
+                    </div>
+                    <h3 class="tourbarmon">{{sline.name}}</h3>
+                </div>
+                <a href="/palomnichestvo/sp/{{sline.surl}}{{sline.tname}}">
+                    <img style="min-height:300px" src="/palomnichestvo/img/{{sline.gallery}}" class="img-responsive"width=400  alt="...">
+                    {% if sline.descr|length>0 %}<div class="gdesc"></div>
+                    <div class="gdesc2">{{sline.descr|raw}}</div>{% else%}
+                    <div style="padding-top:20px"></div>
+                    {% endif %}
+                </a>
+                <div style="width:100%;text-align:center"><a href="/palomnichestvo/sp/{{sline.surl}}{{sline.tname}}"
+                                                             role="button"
+                                                             class="btn btn-info">Подробнее</a></div>
+                <div class="mtop5"></div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="row">
+        <div class="container">
+            <div class="bgreen col-md-12"><span class="bestdir lh38">Места размещения</span></div>
+        </div>
+
+        {% for sline in tophotels %}
+        <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12 noa">
+
+            <div class="thumbnail " style="">
+                <div class="caption">
+                    <div class="row">
+                        <span class="p15"><img src="imgi/{{sline.flagurl}}" vspace="2"/> <span class="lh22center">{{sline.countryname}}</span></span>
+                    </div>
+                    <h3 class="tourbarmon">{{sline.name}}</h3>
+                </div>
+                <a href="/palomnichestvo/razm/{{sline.surl}}{{sline.tname}}">
+                    <img style="min-height:300px" src="/palomnichestvo/img/{{sline.gallery}}" class="img-responsive  " alt="...">
+                    {% if sline.descr|length>0 %}<div class="gdesc"></div>
+                    <div class="gdesc2">{{sline.descr}}</div>{% else%}
+                    <div style="padding-top:20px"></div>
+                    {% endif %}
+                </a>
+                <div style="width:100%;text-align:center"><a href="/palomnichestvo/razm/{{sline.surl}}{{sline.id}}"
+                                                             role="button"
+                                                             class="btn btn-info">Подробнее</a></div>
+                <div class="mtop5"></div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!--<div class="container">-->
+    {% for tline in toparr2 %}
+    <div class="row">
+        <div class="container">
+            <div class="bgreen col-md-12"><span class="bestdir lh38">{{tline.title}}</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        {% for sline in tline %}
+
+        {% if sline.title!="" %}
+        <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12" style="min-height:500px">
+            <div class="thumbnail text-left">
+                <div class="caption">
+                    <div class="row tourbarcaption">
+                        <span class="p15"><img src="imgi/{{sline.flagurl}}" vspace="2"/><span class="lh22center">{{sline.countryname}}</span></span>
+                        <div class="datebirk fright">
+                            <div class="mtop5"></div>
+                            <div class="dmonth">{{sline.ddate}}</div>
+                            <div class="ddmonth">{{month[sline.mdate]}}</div>
+                            <div class="triangletop"></div>
+                        </div>
+                        <h3 class="tourbartop">{{sline.title}}</h3>
+                    </div>
+                </div>
+                <a class="bodycard" href="/palomnichestvo/tours/{{sline.surl}}/{{sline.id}}">
+                    <span class="typeb"><span class="typebirk">&nbsp;{{sline.typname}}&nbsp;</span></span>
+                    <span class="birklay"><span
+                            class="len1birk">&nbsp;{{sline.breslength}}{{sline.bresnight}}&nbsp;</span></span>
+                    <img style="min-height:300px" src="/palomnichestvo/img/{{sline.mainfoto}}" align="left"
+                         class="img-responsive" alt="...">
+                    <div class="caption" style="min-height: 350px;">
+                        <p class="tourbardesc">{{sline.main_descr}}</p>
+                    </div>
+                </a>
+                <div class="hidden-xs thinline mtop5"></div>
+                <div class="h5line"></div>
+
+                <div class="pricebron">
+                    <div class="row text-justify">
+                        <span class="tprice fleft"
+                              style="padding-top:5px; margin-left:25px">От {{sline.baseprice}} &#8381;</span>
+                        <span class="text-right fright" style="padding-bottom:10px; padding-right:30px"><a href="#"                                                                                                           onclick="addTour({{sline.id}})"
+                                                                                                           class="btn btn-primary prm"
+                                                                                                           role="button">Забронировать</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        {% endfor %}
+
+    </div>
+    {% endfor%}
+    <!--</div>-->
+<!--    <div class="row">
+        <div class="container">
+            <div class="bgreen col-md-12"><span
+                    class="bestdir lh38">Маршруты "по заявкам" для групп </span></div>
+        </div>
+    </div>
+    {% set a=0 %}{% set line=0 %}
+    <div class="row">
+        {% for sline in arr %}
+        {% set a=a+1 %}{% if a==4 %}{% set line=line+1 %} {% set a=1 %}<div class="row">{% set opened=true %}{% endif %}
+{% if line<2 %}
+        <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12" style="min-height:400px">
+            <div class="thumbnail text-left">
+                <div class="caption">
+                    <div class="row tourbarcaption">
+                        <span class="p15"><img src="/palomnichestvo/imgi/{{sline.flagurl}}" vspace="2"/> <span
+                                class="lh22center">{{sline.countryname}}</span></span>
+                        <h3 class="tourbartop">{{sline.title}}</h3>
+                    </div>
+                </div>
+                <a class="bodycard" href="/palomnichestvo/tours/{{sline.surl}}/{{sline.id}}">
+                    <span class="typeb"><span class="typebirk">&nbsp;{{sline.typname}}&nbsp;</span></span>
+                    <span class="birklay"><span
+                            class="len1birk">&nbsp;{{sline.breslength}}{{sline.bresnight}}&nbsp;</span></span>
+                    <img src="/palomnichestvo/img/{{sline.mainfoto}}" align="left"
+                         style="min-height:300px" class="img-responsive" alt="...">
+                    <div class="caption" style="min-height:340px">
+                        <p class="tourbardesc">{{sline.main_descr}}</p>
+                    </div>
+                </a>
+                <div class="hidden-xs thinline mtop5"></div>
+                <div class="h5line"></div>
+
+                <div class="pricebron">
+                    <div class="row text-justify">
+                        <span class="tprice fleft"
+                              style="padding-top:5px; margin-left:25px">От {{sline.baseprice}} &#8381;</span>
+                        <span class="text-right fright" style="padding-bottom:10px; padding-right:30px"><a href="#"
+                                                                                                           class="btn btn-primary prm"
+                                                                                                           role="button">Заявка</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endif %}
+        {% if a==3%}</div>{% set opened=false %}{% endif %}
+        {% endfor %}
+        {% if opened%} </div>{%endif %}
+
+    </div>
+</div>-->
+</div>
+
+<div class="container">
+    <div class="row" style="padding-left:20px;padding-top:20px; padding-bottom:120px; ">
+        <div class="col-md-12"><h1>Паломничество и паломнические поездки</h1></div>
+        <div class="col-md-4"><h2>О проекте</h2>
+            <p>Мы создали для вас единую информационную систему паломнических маршрутов, где можно выбрать подходящий вариант путешествия к православным святыням с учётом самых разных личных предпочтений. Наша обширная база данных содержит предложения для паломников от проверенных агентств с надёжной репутацией, которые гарантируют комфортные и безопасные условия поездки, профессионализм экскурсоводов и незабываемые впечатления.</p>
+        </div>
+        <div class="col-md-4 "><h2>О паломничестве</h2>
+            <p>Если целью туризма может быть отдых у моря, посещение достопримечательностей или просто перемена места, то ориентиром паломничества всегда остаётся святыня. На Руси это явление называли «богомольем», и его истоки уходят в особый аскетический подвиг странничества, который подразумевал уход из мира, отказ от определённого места и отречение от уюта и комфорта. Это помогает в полной мере раскрыть смысл и значение настоящего паломничества. </p></div>
+        <div class="col-md-4 "><h2>Паломничество в наше время</h2>
+            <p>На сегодняшний день коллективные поездки к святыням организуются либо паломническими организациями, либо инициативными группами при церковных приходах. В каждом случае в зависимости от выбранного маршрута планируется программа поездки, и решаются вопросы по организации транспорта, гостиничных мест и питания. От того, как исполняются эти задачи, зависит качество и цена обслуживания, а также общее впечатление от поездки. Однако следует понимать, что комфорт в паломничестве не является приоритетом.  </p></div>
+
+
+
+    </div>
+</div>
+
+
+{% endblock %}
+

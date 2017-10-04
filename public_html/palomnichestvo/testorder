@@ -1,0 +1,20 @@
+PHPUnit 6.2.3 by Sebastian Bergmann and contributors.
+
+F                                                                   1 / 1 (100%)wwdew
+
+Time: 103 ms, Memory: 8.00MB
+
+There was 1 failure:
+
+1) orderTest::testgetOrder
+Failed asserting that two strings are equal.
+--- Expected
++++ Actual
+@@ @@
+-'Auser@example.com'
++'[{"prepaysum":"500","0":"500"},{"prepaysum":"500","0":"500"},{"prepaysum":"500","0":"500"},{"prepaysum":"500","0":"500"},{"prepaysum":"500","0":"500"},{"prepaysum":"500","0":"500"},{"prepaysum":"500","0":"500"},{"prepaysum":"500","0":"500"},{"prepaysum":"500","0":"500"},{"prepaysum":"500","0":"500"},{"prepaysum":"500","0":"500"},{"prepaysum":"500","0":"500"},{"prepaysum":"500","0":"500"},{"prepaysum":"500","0":"500"},{"prepaysum":"500","0":"500"},{"prepaysum":"500","0":"500"},{"prepaysum":"500","0":"500"},{"prepaysum":"500","0":"500"},{"prepaysum":"500","0":"500"},{"prepaysum":"500","0":"500"},{"prepaysum":"500","0":"500"},{"prepaysum":"500","0":"500"},{"prepaysum":"500","0":"500"},{"prepaysum":"500","0":"500"},{"prepaysum":"500","0":"500"},{"prepaysum":"500","0":"500"},{"prepaysum":"500","0":"500"},{"prepaysum":"500","0":"500"},{"prepaysum":"500","0":"500"},{"prepaysum":"500","0":"500"},{"prepaysum":"500","0":"500"},{"prepaysum":"500","0":"500"},{"prepaysum":"500","0":"500"},{"prepaysum":"500","0":"500"},{"prepaysum":"500","0":"500"},{"prepaysum":"500","0":"500"},{"prepaysum":"500","0":"500"},{"prepaysum":"500","0":"500"},{"prepaysum":"500","0":"500"},{"prepaysum":"500","0":"500"},{"prepaysum":"500","0":"500"},{"prepaysum":"500","0":"500"},{"prepaysum":"500","0":"500"}]'
+
+/var/www/eltest/public_html/palomnichestvo/tests/orderTest.php:20
+
+FAILURES!
+Tests: 1, Assertions: 1, Failures: 1.

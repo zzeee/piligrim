@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>{% include 'el_ihead.html' %}
+</head>
+<body>
+{% include 'el_bodyhead.html' %}
+<h1>З</h1>
+<a href="/orders">Все заказы</a><br />
+<table>
+    <thead><td>Название</td><td>Описание</td></thead>
+    {% for line in ordertourlines %}
+    <tr><td style="color:Red"><a href="/orderline/{{ line.id }}">{{ line.turid }} {{ line.title }}</a>!!</td><td></td></tr>
+    {% endfor %}
+
+
+</table>
+</body>
+</html>

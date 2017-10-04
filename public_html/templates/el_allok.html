@@ -1,0 +1,16 @@
+{% extends "el_basetemplate.html" %}
+{% block bodyblock %}<div class="container">
+
+    <h1>{{ title}}</h1>
+
+<ul>
+        {% for line in arr %}
+<li>{{line}}</li>
+
+        {% endfor %}
+</ul>
+    <a href="/palomnichestvo">На главную</a>
+
+
+</div>
+{% endblock %}

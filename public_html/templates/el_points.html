@@ -1,0 +1,43 @@
+{% extends "el_basetemplate.html" %}
+{% block bodyblock %}
+
+<div class="container">
+    <div class="row hidden-xs hidden-sm">
+        <div class="my-flex-container">
+            <div class="my-flex-block1"><span class="selcity">Выбрать город:</span></div>
+            {% for lineq in points %}
+            <div class="my-flex-block"><a class="corcity" href="/palomnichestvo/points/{{lineq.url}}{{lineq.id}}">{{lineq.name}}</a>
+            </div>
+            {% endfor%}
+            <div class="my-flex-block"><a class="alldir" href="/palomnichestvo/points">Все направления</a></div>
+        </div>
+        <br/>
+    </div>{% set a=3 %}
+<div class="container">
+    {% for sline in arr %}
+    {% set a=a+1 %}{% if a==4 %} {% set a=1 %}<div class="row">{% set opened=true %}{% endif %}
+    <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12 noa">
+        <div class="thumbnail " style="">
+            <div class="caption">
+                <div class="row">
+                    <span class="p15"><img src="/palomnichestvo/imgi/{{sline.flagurl}}" vspace="2"/> <span class="lh22center">{{sline.countryname}}</span></span>
+                </div>
+                <h3 >{{sline.name}}</h3>
+            </div>
+            <a href="/palomnichestvo/points/{{sline.surl}}{{sline.tname}}">
+                {% if sline.pname|length>0  %} <img src="/palomnichestvo/img/{{sline.thumb}}" class="img-responsive  " alt="...">{% endif %}
+                {% if sline.descr|length>0  %}
+                <div class="gdesc"></div>
+                <div class="gdesc2">{{sline.descr|raw}}</div>{% endif %}
+            </a>
+            <div class="text-center" style="padding:20px"><a href="/palomnichestvo/points/{{sline.surl}}{{sline.tname}}"
+                                                         role="button"
+                                                         class="btn btn-info">Подробнее{% if sline.cn>0%} ({{sline.cn}}){% endif%}</a></div>
+        </div>
+    </div>
+    {% if a==3%}</div>{% set opened=false %}{% endif %}
+    {% endfor %}
+    {% if opened%} </div>{%endif %}
+</div>
+</div></div>
+{% endblock %}

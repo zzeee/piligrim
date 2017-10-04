@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% include 'el_ihead.html' %}
+</head>
+<body>
+<div id="root" ></div>
+<div class="container">
+    <div class="" style="height:270px; ">
+        <div>
+            <img src='/palomnik/img/{{arr["photos"][0].name}}' class="pull-right" vspace=35 hspace=25
+                 height="200"/>
+            <img src='/palomnik/img/{{arr["photos"][1].name}}' class="pull-right" vspace=35 hspace=25
+                 height="200"/>
+        </div>
+        <div style="padding-top:20px"></div>
+        <h1 style="color:#fc6c21;text-align:left">{{arr["turdata"].title }}</h1>
+        <div style="text-align:left" class="lead">{{arr["turdata"].main_descr }}</div>
+        <div style="text-align:left;font-weight:900;color:#5ba707"><h2>{{ tprice }}</h2></div>
+        <div style="text-align:left"><a class="btn btn-lg btn-primary"  onclick="addTour({{arr["turdata"].id}})" role="button">Присоединиться!</a>
+        </div>
+        <!--        <p class="lead">Даты выездов: {{arr["dateline"] }}</p>-->
+    </div>
+</div>
+<div class="container.fluid" >
+    <nav class="navbar navbar-default"  data-spy="affix" data-offset-top="380" id="top_nav">
+        <div class="container" >
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav col-sm-12 col-md-12">
+                    <li class="menu1" >{% include "el_menu2butt.twig" %}
+                    </li>
+                    <li><a class="menup"  style="width: 120px;" href="#top">О поездке</a></li>
+                    <li class="hidden-xs">
+                        <div class="menudel"></div>
+                    </li>
+                    <li ><a style="width: 177px; " class="menup" href="#places">Святыни и места</a>
+                    </li>
+                    <li class="hidden-xs">
+                        <div class="menudel"></div>
+                    </li>
+                    <li><a class="menup" style="width:70px; " href="#photos">Фото</a></li>
+                    <li class="hidden-xs">
+                        <div class="menudel"></div>
+                    </li>
+
+                    <li class="hidden-md hidden-sm"><a style="width:130px; " class="menup" href="#instructions">Подготовка</a>
+                    </li>
+                    <li class="hidden-md hidden-sm hidden-xs">
+                        <div class="menudel"></div>
+                    </li>
+
+                    <li class="hidden-md hidden-sm"><a style="width:120px; " class="menup"
+                                                       href="#otzivi">Впечатления</a></li>
+                    <li class="hidden-md hidden-sm hidden-xs">
+                        <div class="menudel"></div>
+                    </li>
+                    <li class="active"><a class="menup" style="width:95px"   href="#" onclick="addTour({{arr["turdata"].id}})" >Заказ</a></li>
+                    <li class="hidden-md hidden-sm hidden-xs">
+                        <div class="menudel"></div>
+                    </li>
+
+                    <li class="menup navbar-right" style="width:200px">
+                        <!--<a id="dLabel2" role="button" data-toggle="collapse" aria-controls="collapseExample"
+                           aria-haspopup="true" aria-expanded="false" href="#collapseExample" id="toursearch">-->
+                        <form class="form-horizontal" style="height:40px;padding-top:10px;padding-left:10px">
+                            <div class="form-group form-group-sm">
+                                <label class="col-sm-2" for="searchf" style="padding-top:3px;padding-right:5px"><img
+                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAABe0lEQVQ4jaWUPUhcQRCAvzsvicIF0hlB0EpBEKJctEhlIhbaaJEu+NOKRar0tjEQQlBEBVttYkggQgioYCekETSIcnhgZaXYHl+K23e8PN/BOzIw7M7OzMewO7M5lYRMANPAEJAHBG6BXWAZqCQTAFAjbVf31B/qqPog4ZtXz9V3ai7mQ62Dnqpn6nSwS+qS+iGRUFS/qp/TQDn1QH2jPlTX1SN1Vu1LJoRKf4X4f0BT6vdwsKauqi0pgLh2qxfqozhoR32lDqi/M0Ai3VLHIzsPlIB94DWwBlRTX+W+/AReREY+rFXgGjjMCAG4AtojowC0hP3HJiAAT4CbeEUVoLdJCMBz4DQO+gLMNAlpBaaAb/UT9bFaVnsyvhbqovoprbPH1BO1KwPkbYgtpoFQJ0Nlc2ohBdChbqjHIa6/ESjq2E21om6r79UVdd/aLC6EEXmpXsZhOe9/IwBtwCDQCdwBZeAkETMCrIdLP856uY102NrX8ux/QRHsz19ayJDpFeZOCAAAAABJRU5ErkJggg=="
+                                />
+                                </label>
+
+
+
+                                <div style="float:right; padding-left:-50px">
+                                    <!--  </a>--><input type="search" name="searchf" class="form-control col-md-6" id="searchf"
+                                                        placeholder="найти поездку"/>
+                                </div>
+                            </div>
+                        </form>
+                    </li>
+
+
+                </ul><!--
+                -->
+
+            </div><!-- /.navbar-collapse -->
+        </div>
+    </nav>
+</div>
+<a name="top"></a>
+<div class="container">
+    <div class="row">
+        <div class="container" style="z-index:1">
+            <div class="background-primary" style="z-index:1"><span
+                    class="bestdir lh38">О поездке</span></div>
+            <div>{{arr["turdata"].description}}</div><Br />
+            <div><pre style="background:white">{{arr["turdata"].program }}</pre></div>
+        </div>
+        <div class="row"><a class="btn btn-lg btn-primary"  onclick="addTour({{arr["turdata"].id}})" role="button">Присоединиться!</a></div>
+    </div>
+
+    {% if (arr is not empty)  %}
+    <a name="places"></a>
+
+
+    <div class="row">
+        <div class="container" >
+
+
+
+    {% for sline in arr %}
+            {% if sline|length>0 and sline.title!="" and sline[0]!="" %}
+
+    <div class="row">
+        <div class="container">
+            <div class="col-md-12"><span class="bestdir lh38">{{sline.title}}</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row"><div class="container">
+            {% for aline in sline %}
+        {% if aline.id>0 %}
+                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12 noa">
+                    <div class="thumbnail" >
+                        <div class="caption">
+                            <!--<div class="row">
+                                <span class="p15"><img src="/palomnik/imgi/{{sline.flagurl}}" vspace="2"/> <span class="lh22center">{{sline.countryname}}</span></span>
+                            </div>-->
+                            <div class="row text-center" ><h3 style="padding-left:20px; padding-right:20px">{{aline.name}}</h3></div>
+
+                        </div>
+                        <a href="/palomnik/{{sline.prefix}}/{{aline.id}}">
+                            <img style="min-height:250px" src="/palomnik/img/{{aline.pname}}" class="img-responsive  " alt="...">
+                            {% if aline.descr|length>0 %}
+                            <div class="gdesc"></div>
+                            <div class="gdesc2">{{aline.descr}}</div>
+                            {% else %}
+                            <div style="padding-bottom:20px"></div>
+                            {% endif %}
+                        </a>
+                        <div  class="text-center row" style="padding-bottom:20px"><a href="/palomnik/sp/{{aline.id}}"
+                                                                                     role="button"
+                                                                                     class="btn btn-info">Подробнее</a></div>
+                    </div>
+                </div>
+{% endif %}
+        {% endfor %}</div></div>
+
+        {% endif %}
+        {% endfor %}
+
+        </div></div>
+    </ul></div></div>
+    {% endif %}
+<div class="container">
+<a name="photos"></a>
+<h1></h1>
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+
+        <div class="carousel-inner" role="listbox">
+
+            {% set fst=0 %}
+            {% set qt=0 %}
+
+    {% for aline in arr["photos"] %}
+        {%  if aline.gal>0
+            %}{% set qt=qt+1 %}<div class="item {% if fst==0 %} {% set fst=1 %}active{% endif%}">
+                <img class="img-responsive" src="/palomnik/img/{{aline.name}}"/>
+                <div class="carousel-caption">
+                    <p>{{aline.title}}</p>
+                </div>
+            </div>
+{% endif %}
+            {% endfor %}
+
+        </div>
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+
+
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+        </div>
+    {% if arr["dates"] is not empty %}
+    <A name="instructions"></A>
+    <div class="row">
+        <div class="container">
+            <div class="background-primary" style="z-index:1"><span
+                    class="bestdir lh38">Даты отправлений</span></div>
+        </div>
+    </div>
+    <ul class="list-group">
+{%  for line in arr["dates"] %}
+        <li class="list-group-item">{{line.date}} - {{line.comment}}</li>
+        {% endfor %}
+    </ul>
+
+
+    {% endif %}
+
+    {% if arr["instructions"] is not empty %}
+    <A name="instructions"></A>
+    <div class="row">
+        <div class="container">
+            <div class="background-primary" style="z-index:1"><span
+                    class="bestdir lh38">Подготовка</span></div>
+        </div>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">{{arr["instructions"]}}</li>
+    </ul>
+    {% endif %}
+
+
+    {% if arr["otzivi"] is not empty %}
+    <A name="otzivi"></A>
+    <div class="row">
+        <div class="container" >
+            <div class="background-primary" style="z-index:1"><span
+                    class="bestdir lh38">Впечатления</span></div>
+        </div>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">{{arr["otzivi"]}}</li>
+    </ul>
+    {% endif %}
+
+
+
+    </div>
+
+    {% include 'el_bodybottom.html' %}
+
+</body>
+</html>

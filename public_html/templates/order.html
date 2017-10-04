@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>{% include 'ihead.html' %}
+</head>
+<body>
+{% include 'bodyhead.html' %}
+
+<h1>З</h1>
+<a href="/orders">Все заказы</a><br />
+<table>
+    <thead><td>Название</td><td>Описание</td></thead>
+    <tr><td>{% dataarr.fio %}</td></tr>
+    {% for line in dataarr %}
+    <tr><td style="color:Red"><a href="/orderline/{{ line.id }}">{{ line.fio }}{{ line.turid }}</a></td><td>{{ line.phone }}</td></tr>
+    {% endfor %}
+
+
+</table>
+</body>
+</html>

@@ -1,0 +1,61 @@
+{% extends "el_basetemplate.html" %}
+{% block bodyblock %}<div class="container">
+
+    <h1>Расписание</h1>
+
+
+        <div class="bgreen col-md-12"><span class="bestdir lh38">Ближайшие поездки</span></div>
+<div class="row">
+
+    {% for line2 in toplist %}
+
+    <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12" style="z-index:1">
+        <div class="thumbnail text-left">
+            <div class="caption">
+                <div class="row">
+                        <span class="p15"><img src="/palomnichestvo/imgi/{{line2.flagurl}}" vspace="2"/> <span
+                                class="lh22center" >{{line2.countryname}}</span></span>
+                    <div class="datebirk" class="fright">
+                        <div class="mtop5"></div>
+                        <div class="dmonth">{{line2.ddate}}</div>
+                        <div class="ddmonth">{{month[line2.mdate]}}</div>
+                        <div class="triangletop"></div>
+                    </div>
+                    <h3 class="tourbartop">{{line2.title}}</h3>
+                </div>
+            </div>
+            <a class="bodycard" href="/palomnichestvo/tours/{{line2.surl}}/{{line2.id}}">
+                <span class="typeb"><span class="typebirk">&nbsp;{{line2.typname}}&nbsp;</span></span>
+                <span class="birklay"><span
+                        class="len1birk">&nbsp;{{line2.breslength}}{% if line2.bresnight|length>0 %}/{{line2.bresnight}}{% endif %}&nbsp;</span></span>
+                <img src="/palomnichestvo/img/{{line2.gallery}}" align="left"
+                     class="img-responsive" alt="...">
+                {% if line2.main_descr|length>0 %}
+                <div class="gdesc2"><div class="gdesc"></div>   {{line2.main_descr|raw}}</div>{% else%}
+                <div style="padding-top:20px"></div>
+                {% endif %}
+
+            </a>
+            <div class="hidden-xs thinline mtop5"></div>
+            <div class="h5line"></div>
+
+            <div class="pricebron">
+                <div class="row text-justify">
+                        <span class="tprice fleft"
+                              style="padding-top:5px; margin-left:25px">От {{line2.baseprice}} &#8381;</span>
+                    <span class="text-right fright" style="padding-bottom:10px; padding-top:5px;padding-right:30px"><button
+                            href="#" class="btn btn-primary prm order"
+                            id={{line2.id}}
+                            role="button">Забронировать</button><span class="showtour" data-attr="{{line2.id}}"></span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+</div>
+
+
+
+</div>
+    {% endblock %}

@@ -1,0 +1,4 @@
+/usr/local/bin/php /usr/bin/phpunit --bootstrap bootstrap.php tests/orderTest.php
+/usr/local/bin/php /usr/bin/phpunit --bootstrap bootstrap.php tests/userTest.php
+/usr/local/bin/php /usr/bin/phpunit --bootstrap bootstrap.php tests/pointTest.php
+/usr/local/bin/php /usr/bin/phpunit --bootstrap bootstrap.php tests/toursTest.php

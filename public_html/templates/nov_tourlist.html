@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title> {% include 'nov_ihead.html' %}
+</head>
+<body>
+{% include 'nov_bodyhead.html' %}
+
+
+<div class="row" >
+    <ol class="breadcrumb">
+        <li><a href="/">Главная</a></li>
+        <li><a href="/tours">Туры</a></li>
+        <li><a href="/tours/{{idd}}">{{idname}}</a></li>
+    </ol>
+
+    {% for line2 in toplist %}
+    <div class="panel panel-default col-md-12">
+        <h2>Ближайшие поездки</h2>
+        <!-- Default panel contents -->
+        <div class="col-sm-6 col-md-4" >
+            <div class="thumbnail"  >
+                <span class="label label-success">Паломничество</span>
+                <img height=200 src='http://www.nov-rus.ru/img/{{line2.mainfoto}}'>
+                <div class="caption">
+                    <h3>
+                        <a href='/tours/{{line2.surl}}/{{line2.id}}'>{{line2.title}}</a>
+                    </h3>
+                    <h2>{{line2.blength}} дней за {{line2.baseprice}} руб.</h2>
+                    <p>Даты отправлений:
+                    </p>
+                    <p><a href="index.php?action=showatour&tournumber=60" class="btn btn-primary"  role="button">Забронировать!</a> </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    {% endfor %}
+</div>
+
+<table class="table table-striped" valign="top" border="0">
+    <thead>
+    <td>Направление</td>
+    <td>Минимальая стоимость за человека</td>
+    <td>Дней</td>
+    </thead>
+    <thead><td>Название</td><td>Описание</td></thead>
+    {% for line in arr["tours"] %}
+    <tr><td><a href="/tours/{{ line.surl }}/{{ line.id }}">{{ line.title }}</a><br />{{line.main_descr}}</td><td>{{ line.baseprice }}</td><td>{{line.blength}}</td><td>{{line.cm|raw}}</td><td>{{line.cm2|raw}}</td><td>{{line.cm3|raw}}</td></tr>
+    {% endfor %}
+</table>
+</body>
+</html>

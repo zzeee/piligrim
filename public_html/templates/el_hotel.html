@@ -1,0 +1,20 @@
+{% extends "el_basetemplate.html" %}
+{% block bodyblock %}<div class="container">
+
+    <h1>{{hotel["title"]}}</h1>
+    <p>
+        {{hotel["descr"]}}
+    </p>
+<h2>Возможности</h2>
+    {%if hotel.mainfoto|length>0%}<img width="200" src="/palomnichestvo/img/{{hotel.mainfoto}}" />{% endif %}
+    <table cellspacing=10 class="table">
+        {% for line in arr %}
+        <tr><td>{%if line.mainfoto|length>0%}<img width="200" src="/palomnichestvo/img/{{line.mainfoto}}" />{% endif %}</td><td>{{line.title}}<br /><br />{{line.description}}</td><td>{{line.price}}/{{line.price1}}  руб.</td></tr>
+        {% endfor %}
+    </table>
+    <button  class="btn btn-info" onclick="window.order.addhotelreserve( {{hotel["id"]}})">Забронировать</button>
+    <br /><a href="/palomnichestvo">На главную</a>
+
+
+</div>
+{% endblock %}
